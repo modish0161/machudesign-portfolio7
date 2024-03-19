@@ -3854,13 +3854,13 @@ html {
   
   .work_header {
     z-index: 99;
-    height: 50vh;
+    height: 60vh;
     grid-column-gap: 8rem;
     grid-row-gap: 8rem;
     background-color: #fff;
     flex-direction: column;
     align-items: flex-start;
-    padding-bottom: 3rem;
+    padding-bottom: 4rem;
     display: flex;
     position: -webkit-sticky;
     position: sticky;
@@ -3874,13 +3874,14 @@ html {
     grid-column-gap: 6rem;
     grid-row-gap: 6rem;
     background-color: #fff;
-    border-bottom: .0625rem solid #000;
+    border-bottom: .0700rem solid #000;
     padding: 0 0 2rem;
     position: -webkit-sticky;
     position: sticky;
     top: 0;
     bottom: 0;
     overflow: hidden;
+    padding-bottom: 1rem;
   }
   
   .work-header_general-information-wrapper {
@@ -4155,8 +4156,8 @@ html {
     border-radius: .6rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
-    padding-top: 2rem;
-    padding-bottom: 2rem;
+    padding-top: 1rem;
+    padding-bottom: 9rem;
     display: flex;
     overflow: hidden;
   }
@@ -4529,7 +4530,7 @@ html {
   }
   
   .client-image-wrapper.is-eve {
-    background-image: url("https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/6392a97b73801c4684b93c89_T1V13UTS5-UJQR8K13P-2ceccd310bb3-512.jpeg");
+    background-image: url("images/Profiles-Clients/Carl Chapel.jpg");
   }
   
   .client-image-wrapper.is-jonas {
@@ -4730,8 +4731,7 @@ html {
     width: 100%;
     grid-column-gap: 2rem;
     grid-row-gap: 1rem;
-    filter: invert();
-    color: #000;
+    color: #fff;
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
@@ -4741,7 +4741,7 @@ html {
   }
   
   .logo1_logo {
-    max-height: 1.5rem;
+    max-height: 3.5rem;
   }
   
   .webflow-users_component {
@@ -5139,7 +5139,7 @@ html {
   .text-span-4 {
     width: 8rem;
     height: 8rem;
-    background-image: url("https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/638c504bc239de2de2c2ff2f_Frame%20(2).svg");
+    background-image: url("images/MC_LOGO_ICON__FINAL-modified.png");
     background-position: 50%;
     background-repeat: no-repeat;
     background-size: auto;
@@ -5450,7 +5450,7 @@ html {
   .dashboard-grid_item.is-light {
     grid-row-gap: 1rem;
     background-color: #dfdfdf;
-    background-image: linear-gradient(rgba(255, 255, 255, .33), rgba(255, 255, 255, .33)), url("https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/6390011d453fa84bd8171412_Frame.svg");
+    background-image: linear-gradient(rgba(255, 255, 255, .33), rgba(255, 255, 255, .33)), url("images/Matt Collins-Camoflage Banner in Aminata mushroom.png");
     background-position: 0 0, 0 0;
     background-repeat: repeat, no-repeat;
     background-size: auto, auto;
@@ -5465,8 +5465,8 @@ html {
   }
   
   .dashboard-grid_item.is-pink {
-    background-color: #fdff5d;
-    background-image: url("https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/63900194a77bb061d34cae65_Frame%20(1).svg");
+    background-color: #0099ff;
+    background-image: url("images/Matt Collins-Camoflage Banner in Blue and Cream Like Cow.png");
     background-position: 0 100%;
     background-repeat: no-repeat;
     background-size: auto;
@@ -5610,7 +5610,7 @@ html {
   .webflow-span {
     width: 1.7rem;
     height: 1.7rem;
-    background-image: url("https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/638c504bc239de2de2c2ff2f_Frame%20(2).svg");
+    background-image: url("images/MC_LOGO_ICON__FINAL-modified.png");
     background-position: 0 0;
     background-repeat: no-repeat;
     background-size: contain;
