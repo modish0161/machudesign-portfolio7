@@ -304,6 +304,46 @@ background-color: black;
 color: white;
 }
 
+.card-content_tag-wrapper {
+    display: flex; /* This turns the tag wrapper into a flex container */
+}
+
+.card-content_list {
+    flex: 1; /* This allows each list to take up equal space within the tag wrapper */
+    margin-right: 20px; /* Adds some space between the two lists; adjust as needed */
+}
+
+.card-content_list:last-child {
+    margin-right: 0; /* Removes margin from the right side of the last list to prevent extra spacing */
+}
+
+.project-tag a {
+    color: inherit; /* Ensures link color matches the surrounding text */
+    text-decoration: none; /* Removes underline from links */
+    display: block; /* Makes the entire list item area clickable */
+}
+
+    /* Keyframes for the growing effect */
+@keyframes growWidth {
+    from {
+        flex-grow: 0;
+    }
+    to {
+        flex-grow: 1;
+    }
+}
+
+/* Applying the animation to your content blocks */
+.grow-effect {
+    animation: growWidth 2s ease forwards;
+}
+
+/* Additional styles for the animation */
+.otherwork_grid ._2 > div, .otherwork_grid ._2 > a {
+    flex-basis: 0;
+    overflow: hidden;
+}
+
 html { font-size: calc(0.625rem + 0.41666666666666663vw); }
   @media screen and (max-width:1920px) { html { font-size: calc(0.625rem + 0.41666666666666674vw); } }
   @media screen and (max-width:1440px) { html { font-size: calc(0.8126951092611863rem + 0.20811654526534862vw); } }
@@ -315,6 +355,60 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
     -webkit-user-select: none;
     -o-user-select: none;
     user-select: none;
+}
+
+/* Central hover effect styling for link buttons */
+.card-content_list .project-tag a:hover {
+    color: black; /* Text color on hover */
+    background-color: #f0f0f0; /* Background color on hover */
+    border-radius: 6px; /* Rounded corners on hover */
+    font-weight: bold; /* Bold text on hover */
+    padding: 5px; /* Padding for visual spacing */
+}
+
+/* General styling for link buttons */
+.card-content_list .project-tag a {
+    display: block; /* Block display to fill list item */
+    padding: 5px 10px; /* Padding for size */
+    border-radius: 4px; /* Rounded corners */
+    text-decoration: none; /* No underline */
+    color: inherit; /* Inherit text color */
+    text-align: center; /* Center text */
+}
+
+/* Adjustments for the .card-content_tag-wrapper to utilize CSS Grid for a 4-column layout */
+.card-content_tag-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between grid items */
+    justify-items: center; /* Center items horizontally */
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .card-content_tag-wrapper {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on smaller screens */
+    }
+}
+
+/* Additional styles, ensuring no duplication */
+.otherwork_card-content a:hover {
+    color: black; /* Hover color for all links within .otherwork_card-content */
+}
+
+/* Ensuring list and project tag stylings are succinct and non-conflicting */
+.card-content_list {
+    list-style-type: none; /* No bullets */
+    padding: 0; /* No padding */
+    margin: 0; /* No margin, ensures grid alignment */
+    width: 100%; /* Full width */
+    display: flex; /* Flex display for centering */
+    justify-content: center; /* Center items horizontally */
+    flex-wrap: wrap; /* Allow wrapping */
+}
+
+.card-content_list .project-tag {
+    margin: 5px; /* Space around tags */
 }
                 </style>
             </div>
@@ -352,7 +446,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                     class="navbar_component w-nav"
                 >
                     <div class="navbar_container">
-                        <nav role="navigation" id="w-node-_8107ecba-cf98-2e8d-dfd9-4bc18be29634-8be29632" class="navbar_menu w-nav-menu">
+                        <nav role="navigation" id="matty-id-node-_8107ecba-cf98-2e8d-dfd9-4bc18be29634-8be29632" class="navbar_menu w-nav-menu">
                             <div class="navbar_menu-link-wrapper">
                                 <a href="index.html" aria-current="page" class="logo-link is--1 w-inline-block w--current">
                                     <img
@@ -374,7 +468,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                 <div class="sticky-transition-wrapper _1">
                     <section id="hero" class="section_hero">
                         <div class="top-navigation_component">
-                            <div id="w-node-_297bac80-d097-448d-a3af-bd932241cb0c-2241cb0b" data-w-id="297bac80-d097-448d-a3af-bd932241cb0c" class="navigation_color-switch-container">
+                            <div id="matty-id-node-_297bac80-d097-448d-a3af-bd932241cb0c-2241cb0b" data-w-id="297bac80-d097-448d-a3af-bd932241cb0c" class="navigation_color-switch-container">
                                 <div class="color-switch_icon background-color-black">
                                     <div class="emoji is-medium text-color-white">🖼</div>
                                 </div>
@@ -400,7 +494,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                     </a>
                                 </div>
                             </div>
-                            <div id="w-node-_297bac80-d097-448d-a3af-bd932241cb25-2241cb0b" class="navigation_about">
+                            <div id="matty-id-node-_297bac80-d097-448d-a3af-bd932241cb25-2241cb0b" class="navigation_about">
                                 <a href="index.html" aria-current="page" class="logo-link is--1 w-inline-block w--current">
                                     <img
                                         src="images/MC_LOGO_ICON__FINAL-modified.png"
@@ -411,7 +505,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                 </a>
                                 <h1 class="heading-style-header">MJ. COLLINS  : Crafting digital innovation with a creative flair.</h1>
                             </div>
-                            <div id="w-node-_297bac80-d097-448d-a3af-bd932241cb2a-2241cb0b" class="navigation_social-links-button">
+                            <div id="matty-id-node-_297bac80-d097-448d-a3af-bd932241cb2a-2241cb0b" class="navigation_social-links-button">
                                 <a data-w-id="297bac80-d097-448d-a3af-bd932241cb2b" href="index.html#" class="button is-nav w-inline-block">
                                     <div class="icon-embed-xxsmall w-embed">
                                         <svg
@@ -579,7 +673,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                             <div class="abouts_wrapper">
                                 <div class="margin-top margin-large">
                                     <div class="w-layout-grid about_wraooer">
-                                        <div id="w-node-_501ba0d8-0c0a-20be-60ad-d58727482fbd-c34ab57e" class="about_content-left">
+                                        <div id="matty-id-node-_501ba0d8-0c0a-20be-60ad-d58727482fbd-c34ab57e" class="about_content-left">
                                             <h2 class="about_animated-heading">
                                                 <span style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="about_animated-span _1">A</span>
                                                 <span style="-webkit-transform:translate3d(0, 150%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 150%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 150%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 150%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="about_animated-span _2">b</span>
@@ -588,7 +682,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                 <span style="-webkit-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 100%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="about_animated-span _5">t</span>
                                             </h2>
                                         </div>
-                                        <div id="w-node-a66d9190-72a1-30b6-ba9c-513e78b1d7d6-c34ab57e" style="opacity:0;-webkit-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="about_content-right">
+                                        <div id="matty-id-node-a66d9190-72a1-30b6-ba9c-513e78b1d7d6-c34ab57e" style="opacity:0;-webkit-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="about_content-right">
                                             <div class="margin-bottom margin-small">
                                                 <p class="text-size-small">
                                                     <span class="text-span-8">MJ. Collins</span>
@@ -871,13 +965,13 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                             </div>
                                             <div class="work-header_general-information-wrapper hide-tablet"></div>
                                             <div class="work-header_general-information-wrapper hide-tablet">
-                                                <div id="w-node-c65e6174-66e4-203c-4ff6-fec540444dbe-c34ab57e" class="general-information_column">
+                                                <div id="matty-id-node-c65e6174-66e4-203c-4ff6-fec540444dbe-c34ab57e" class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">TIMEFRAME</div>
                                                     <ul role="list" class="w-list-unstyled">
                                                         <li class="text-size-small text-weight-medium">YEAR 2000-24</li>
                                                     </ul>
                                                 </div>
-                                                <div id="w-node-_263ea09c-94bf-9f9a-5fbd-ccb6517dfb66-c34ab57e" class="general-information_column">
+                                                <div id="matty-id-node-_263ea09c-94bf-9f9a-5fbd-ccb6517dfb66-c34ab57e" class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">DISCIPLINES</div>
                                                     <ul role="list" class="w-list-unstyled">
                                                         <!--Frontend Technologies-->
@@ -1031,7 +1125,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         <br>
                                                     </ul>
                                                 </div>
-                                                <div id="w-node-_77ca2349-47dd-2e0f-4330-3b2f51981932-c34ab57e" class="general-information_column">
+                                                <div id="matty-id-node-_77ca2349-47dd-2e0f-4330-3b2f51981932-c34ab57e" class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">TOOLS</div>
                                                     <ul role="list" class="w-list-unstyled">
                                                         <!--Frontend Technologies-->
@@ -1195,7 +1289,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         <li class="text-size-small text-weight-medium">Falcon UXI</li>
                                                     </ul>
                                                 </div>
-                                                <div id="w-node-_00c20448-77bc-7c55-453f-8bb33cd649de-c34ab57e" class="general-information_column">
+                                                <div id="matty-id-node-_00c20448-77bc-7c55-453f-8bb33cd649de-c34ab57e" class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">Industry</div>
                                                     <ul role="list" class="text-align-right max-width-small w-list-unstyled">
                                                         <li class="project-tag is-small">#CRYPTO</li>
@@ -1219,7 +1313,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         <br>
                                                         <br>
                                                     </ul>
-                                                    <div id="w-node-_00c20448-77bc-7c55-453f-8bb33cd649de-c34ab57e" class="general-information_column">
+                                                    <div id="matty-id-node-_00c20448-77bc-7c55-453f-8bb33cd649de-c34ab57e" class="general-information_column">
                                                         <br>
                                                         <br>
                                                         <br>
@@ -1242,13 +1336,13 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         <div class="modal_content-wrapper">
                                                             <div class="modal_content-wrapper_column-is-1">
                                                                 <div class="work-modal_general-information-wrapper text-color-white">
-                                                                    <div id="w-node-_7eb94a15-db77-1974-d24a-4439ad8e63ab-c34ab57e" class="general-information_column">
+                                                                    <div id="matty-id-node-_7eb94a15-db77-1974-d24a-4439ad8e63ab-c34ab57e" class="general-information_column">
                                                                         <div class="text-size-small text-style-allcaps">TIMEFRAME</div>
                                                                         <ul role="list" class="w-list-unstyled">
                                                                             <li class="text-size-small text-weight-medium">2022</li>
                                                                         </ul>
                                                                     </div>
-                                                                    <div id="w-node-_7eb94a15-db77-1974-d24a-4439ad8e63b1-c34ab57e" class="general-information_column">
+                                                                    <div id="matty-id-node-_7eb94a15-db77-1974-d24a-4439ad8e63b1-c34ab57e" class="general-information_column">
                                                                         <div class="text-size-small text-style-allcaps">DISCIPLINE</div>
                                                                         <ul role="list" class="w-list-unstyled">
                                                                             <li class="text-size-small text-weight-medium">No code development</li>
@@ -1270,8 +1364,8 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                             <div style="opacity:0;-webkit-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="work_table-wrapper w-dyn-list">
                                                 <div role="list" class="collection-list w-dyn-items">
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
                                                                     <img src="images/1-LogosForFavicons/machudesign.png" width="100%" height="100%">
                                                                 </div>
@@ -1319,11 +1413,11 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
                                                                     <div class="icon-embed-small w-embed">
-                                                                        <img src="images/1-LogosForFavicons/machudesign.png" width="100%" height="100%">
+                                                                        <img src="images/1-LogosForFavicons/Modish0161.png" width="100%" height="100%">
                                                                     </div>
                                                                 </div>
                                                                 <div class="icon-embed-small w-condition-invisible w-embed">
@@ -1385,11 +1479,11 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
                                                                     <div class="icon-embed-small w-embed">
-                                                                        <img src="images/1-LogosForFavicons/machudesign.png" width="100%" height="100%">
+                                                                        <img src="images/1-LogosForFavicons/moolah-icon.png" width="100%" height="100%">
                                                                     </div>
                                                                 </div>
                                                                 <div class="icon-embed-small w-condition-invisible w-embed">
@@ -1451,11 +1545,11 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
                                                                     <div class="icon-embed-small w-embed">
-                                                                        <img src="images/1-LogosForFavicons/machudesign.png" width="100%" height="100%">
+                                                                        <img src="images/1-LogosForFavicons/zeroartlogo.png" width="100%" height="100%">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1502,11 +1596,11 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
                                                                     <div class="icon-embed-small w-embed">
-                                                                        <img src="images/1-LogosForFavicons/machudesign.png" width="100%" height="100%">
+                                                                        <img src="images/1-LogosForFavicons/Zero-Blockchain-Logo.png" width="100%" height="100%">
                                                                     </div>
                                                                 </div>
                                                             </div>
@@ -1553,46 +1647,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/zero-bank-logo.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">www.zero-bank.io</div>
@@ -1638,46 +1698,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
-                                                                <div class="icon-embed-small w-condition-invisible w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-Logos/Solidity-Logo.wine.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">Smarts Contracts & Solidity Programmming</div>
@@ -1723,51 +1749,17 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/Matt Collins-Portfolio.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">Portfolio - No. 7</div>
                                                             <div class="heading-style-h3 hide-tablet">—</div>
-                                                            <div class="heading-style-h3 hide-tablet">With a whole lot more of some good stuff!</div>
+                                                            <div class="heading-style-h3 hide-tablet">Different Portfolio Exploring Use Cases Within Web Development</div>
                                                         </div>
                                                         <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fc" class="image-wrapper">
                                                             <div class="image-sticky">
@@ -1808,46 +1800,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/zeroartlogo.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">www.Zero-Art.com</div>
@@ -1893,46 +1851,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/CannaBeeDee.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">www.CannaBeeDee.com</div>
@@ -1978,46 +1902,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/ReguSync_favicon.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">www.ReguSync.com</div>
@@ -2063,46 +1953,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/zero-gpt/Zero-Gpt-Logo.webp" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">www.Zero-GPT.io</div>
@@ -2148,46 +2004,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/Design-Zero-Favicon.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">www.Design-Zero.com</div>
@@ -2233,46 +2055,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/Phoenix P Logo.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">Phoenix Industry Project Landing Page</div>
@@ -2318,46 +2106,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/Phoenix P Logo.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">Phoenix Industry Project</div>
@@ -2403,46 +2157,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/No-Brainer-Logo.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">No-Brainer - A Website For AI Chat Experience</div>
@@ -2488,46 +2208,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/Modish0161.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">Modish0161 Space-Portfolio - Full Stack Development Experience.</div>
@@ -2573,46 +2259,12 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </a>
                                                     </div>
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
-                                                        <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
-                                                            <div id="w-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
+                                                        <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f35-c34ab57e" data-w-id="67c449c6-c259-d843-d852-b1e4d11f1f35" class="line_title-wrapper">
+                                                            <div id="matty-id-node-_67c449c6-c259-d843-d852-b1e4d11f1f36-c34ab57e" class="icon-wrapper">
                                                                 <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--iconoir"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <g
-                                                                            fill="none"
-                                                                            stroke="currentColor"
-                                                                            stroke-linecap="round"
-                                                                            stroke-linejoin="round"
-                                                                            stroke-width="1.5"
-                                                                        >
-                                                                            <path d="M6 6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Zm6-3h3a3 3 0 0 1 0 6h-3V3Z"></path>
-                                                                            <path d="M12 12a3 3 0 1 1 6 0a3 3 0 0 1-6 0v0Zm-6 6a3 3 0 0 1 3-3h3v3a3 3 0 0 1-6 0Zm0-6a3 3 0 0 1 3-3h3v6H9a3 3 0 0 1-3-3Z"></path>
-                                                                        </g>
-                                                                    </svg>
-                                                                </div>
-                                                                <div class="icon-embed-small w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--simple-icons"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path fill="currentColor" d="M17.802 8.56s-1.946 6.103-2.105 6.607a4778.8 4778.8 0 0 0-1.484-11.473c-3.316 0-5.089 2.36-6.026 4.851l-2.565 6.637c-.015-.476-.36-6.565-.36-6.565c-.204-3.052-3-4.91-5.262-4.91l2.739 16.6c3.474-.015 5.347-2.361 6.328-4.852c0 0 2.09-5.398 2.176-5.643c.015.23 1.5 10.494 1.5 10.494c3.488 0 5.362-2.202 6.37-4.606L24 3.708c-3.445 0-5.261 2.346-6.198 4.851Z"></path>
-                                                                    </svg>
+                                                                    <div class="icon-embed-small w-embed">
+                                                                        <img src="images/1-LogosForFavicons/Fior Ribelle Favicon Logo.png" width="100%" height="100%">
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                             <div class="heading-style-h3">Fior Ribelle - Redefining Fashion with Couture Elegance</div>
@@ -2676,48 +2328,101 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                 </div>
                                             </div>
                                             <div class="otherwork_content-wrapper">
-                                                <div class="otherwork_grid _2">
-                                                    <a href="https://www.machudesign.com" class="otherwork_card-content is-yellow w-inline-block">
-                                                        <div id="w-node-e703a1c3-2274-fa3f-ff20-0fd476ad8d1b-c34ab57e" class="card-content_all-caps-text">CLONE THOSE AND HAVE FUN ↗</div>
-                                                        <ul role="list" class="card-content_list hide-desktop w-list-unstyled">
-                                                            <li class="project-tag">#People-first</li>
-                                                            <li class="project-tag">#Inspiration</li>
-                                                        </ul>
-                                                        <div class="built-on-wrapper">
+                                                <div class="otherwork_grid _2" style="display: flex; align-items: center;">
+                                                    <!-- Flex container -->
+                                                    <div class="otherwork_card-content is-yellow w-inline-block grow-effect">
+                                                        <a
+                                                            href="https://oncyber.io/into-the-bit-collection"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            class="card-content_all-caps-text"
+                                                        >CHECK THESE AND HAVE FUN ↗</a>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/b8a9aa71f200363560d143d24433a62a?tab=items" target="_blank" rel="noopener noreferrer">
+                                                                        # The Block-Integration Collection
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/9644925f96d458d2751430cd63fbecb4?tab=items" target="_blank" rel="noopener noreferrer"># The Blocks Are Us Collection</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/32f3b9a0dff282ae2bc411de90190831?tab=items" target="_blank" rel="noopener noreferrer"># The Cuboidal Collage Collection</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/f3c2e1be579fcaa64764a220f603e525?tab=items" target="_blank" rel="noopener noreferrer"># The State Of The Art Collection</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/0a7be507ab96f603f69d302b9fe5bee8?tab=items" target="_blank" rel="noopener noreferrer"># The Into The Bit Collection</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/a42f0100dc95fdf2ab8f5eec24b226de?tab=items" target="_blank" rel="noopener noreferrer"># The Abstract Expressionist Collection</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/c4107bc968f5a5a3a762a36ac1c1f5f1?tab=items" target="_blank" rel="noopener noreferrer"># The Achromatize Collection</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/54f2ab49ed888c15c83b7ca1cae3167b?tab=items" target="_blank" rel="noopener noreferrer"># The Crypto-Bubbla Collection</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/77a7b9c5669cfb5ae07a63d1717f01bd?tab=items" target="_blank" rel="noopener noreferrer"># The Make It Real Collection</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/77d98bfb3d4e4dfac0e37daac3faa284?tab=items" target="_blank" rel="noopener noreferrer">
+                                                                        # The Random Square Collection
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/7518f421f03a4577b0408a9149604f1c?tab=items" target="_blank" rel="noopener noreferrer">
+                                                                        # The
+                                                                        <br>
+                                                                        Nucleus Collection
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://crypto.com/nft/collection/00e18797aad3a18faee67180be68a529?tab=items" target="_blank" rel="noopener noreferrer">
+                                                                        # The
+                                                                        <br>
+                                                                        U8-17 Collection
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                            <!-- Repeat with other <ul> elements as necessary -->
+                                                        </div>
+                                                        <div class="built-on-wrapper" style="display: flex; align-items: center;">
                                                             <img
-                                                                src="https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/63895ac142ab4a6982b8e42c_Group%2065%20(1).svg"
+                                                                src="images/1-LogosForFavicons/zeroartlogo.png"
                                                                 loading="lazy"
                                                                 alt=""
                                                                 class="card-content_icon"
                                                             >
-                                                            <div class="card-content_heading">ZEROARTNFT.COM.</div>
+                                                            <a
+                                                                href="https://www.zeroartnft.com"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                class="card-content_heading"
+                                                            >ZEROARTNFT.COM.</a>
                                                         </div>
-                                                        <div class="card-content_overlay is-yellow"></div>
-                                                    </a>
-                                                    <a href="https://www.youtube.com/playlist?list=PLpjTM82q4Gu5wnVDzN6jAGxxYVY7JfMCL" target="_blank" class="otherwork_card-content is-red w-inline-block">
-                                                        <div id="w-node-_77398629-d8b9-2282-7637-6b6df9e88f85-c34ab57e" class="card-content_all-caps-text">USE MJ IN YOUR TECHNOLOGICAL ENDEAVOURS↗</div>
-                                                        <ul role="list" class="card-content_list hide-desktop w-list-unstyled">
-                                                            <li class="project-tag">#procedure</li>
-                                                            <li class="project-tag">#efficiency</li>
-                                                        </ul>
+                                                    </div>
+                                                    <a
+                                                        href="https://www.youtube.com/playlist?list=PLpjTM82q4Gu5wnVDzN6jAGxxYVY7JfMCL"
+                                                        target="_blank"
+                                                        class="otherwork_card-content is-red w-inline-block grow-effect"
+                                                        style="flex-grow: 1;"
+                                                    >
+                                                        <div id="matty-id-node-_77398629-d8b9-2282-7637-6b6df9e88f85-c34ab57e" class="card-content_all-caps-text">USE MJ IN YOUR TECHNOLOGICAL ENDEAVOURS OR EVEN PLAIN OL' YOUTUBE CHANNELS ↗</div>
                                                         <div class="card-content_overlay is-blue"></div>
-                                                        <div id="w-node-d9c742b9-97d5-5453-50eb-bc69973f6797-c34ab57e" class="built-on-wrapper">
+                                                        <div id="matty-id-node-d9c742b9-97d5-5453-50eb-bc69973f6797-c34ab57e" class="built-on-wrapper">
                                                             <div class="div-block-8">
                                                                 <div class="card-content_icon w-embed">
-                                                                    <svg
-                                                                        xmlns="http://www.w3.org/2000/svg"
-                                                                        xmlns:xlink="http://www.w3.org/1999/xlink"
-                                                                        aria-hidden="true"
-                                                                        role="img"
-                                                                        class="iconify iconify--bx"
-                                                                        width="100%"
-                                                                        height="100%"
-                                                                        preserveAspectRatio="xMidYMid meet"
-                                                                        viewBox="0 0 24 24"
-                                                                    >
-                                                                        <path d="M21.593 7.203a2.506 2.506 0 0 0-1.762-1.766C18.265 5.007 12 5 12 5s-6.264-.007-7.831.404a2.56 2.56 0 0 0-1.766 1.778c-.413 1.566-.417 4.814-.417 4.814s-.004 3.264.406 4.814c.23.857.905 1.534 1.763 1.765c1.582.43 7.83.437 7.83.437s6.265.007 7.831-.403a2.515 2.515 0 0 0 1.767-1.763c.414-1.565.417-4.812.417-4.812s.02-3.265-.407-4.831zM9.996 15.005l.005-6l5.207 3.005l-5.212 2.995z" fill="currentColor"></path>
-                                                                    </svg>
-                                                                </div>
+                                                                    <!-- SVG or Icon content --></div>
                                                                 <div class="card-content_heading">CHANNELS.</div>
                                                             </div>
                                                         </div>
@@ -2725,7 +2430,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                 </div>
                                                 <div class="otherwork_grid">
                                                     <a href="https://www.machudesign.com" target="_blank" class="otherwork_card-content is-green w-inline-block">
-                                                        <div id="w-node-_438fa2cb-e5df-fdeb-1f49-10734851a3c3-c34ab57e" class="card-content_all-caps-text">MACHUDESIGN.COM↗</div>
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3c3-c34ab57e" class="card-content_all-caps-text">MACHUDESIGN.COM↗</div>
                                                         <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
                                                                 <li class="project-tag">#2D&3D DRAWINGS</li>
@@ -2735,14 +2440,14 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                                 <li class="project-tag">#LINKED IN</li>
                                                             </ul>
                                                         </div>
-                                                        <div id="w-node-_438fa2cb-e5df-fdeb-1f49-10734851a3cd-c34ab57e" class="built-on-wrapper">
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3cd-c34ab57e" class="built-on-wrapper">
                                                             <div class="card-content_heading">Article.</div>
                                                         </div>
                                                         <div class="card-content_overlay is-green"></div>
                                                     </a>
                                                     <a href="https://www.machudesign.com" class="otherwork_card-content is-pink w-inline-block">
-                                                        <div id="w-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">SaaS DevOps Software-Engineering WebDev LINE 3325 ↗</div>
-                                                        <div id="w-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">SaaS DevOps Software-Engineering WebDev LINE 3325 ↗</div>
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
                                                         <ul role="list" class="card-content_list w-list-unstyled">
                                                             <li class="project-tag">#Senior-Software-Developer</li>
                                                             <li class="project-tag">#DIGITAL-MASTER</li>
@@ -2761,7 +2466,109 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </div>
                                                     </a>
                                                     <a href="https://www.moo-lah.io" target="_blank" class="otherwork_card-content is-blue w-inline-block">
-                                                        <div id="w-node-bae7e66b-d131-cb21-897e-69cb48696041-c34ab57e" class="card-content_all-caps-text">MOO-LAH.IO↗</div>
+                                                        <div id="matty-id-node-bae7e66b-d131-cb21-897e-69cb48696041-c34ab57e" class="card-content_all-caps-text">MOO-LAH.IO↗</div>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">#TECH POSTS</li>
+                                                                <li class="project-tag">#TECH POSTS</li>
+                                                                <li class="project-tag">#TECH POSTS</li>
+                                                                <li class="project-tag">#TECH POSTS</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div class="card-content_overlay is-orange"></div>
+                                                        <div class="built-on-wrapper" style="display: flex; flex-direction: column;">
+                                                            <!-- Additional List to the Right -->
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">#TECH POST</li>
+                                                                <li class="project-tag">#TECH POST</li>
+                                                                <li class="project-tag">#TECH POST</li>
+                                                                <li class="project-tag">#TECH POST</li>
+                                                                <li class="project-tag">#TECH POST</li>
+                                                            </ul>
+                                                            <div class="div-block-8">
+                                                                <div class="card-content_heading">Another Articles.</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div class="otherwork_content-wrapper">
+                                                <div class="otherwork_grid _2" style="display: flex; align-items: center;">
+                                                    <!-- Flex container -->
+                                                    <div class="otherwork_card-content is-yellow w-inline-block grow-effect">
+                                                        <a href="https://example.com/clone-fun" class="card-content_all-caps-text">CLONE THOSE AND HAVE FUN ↗</a>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <!-- List items --></ul>
+                                                            <!-- Repeat with other <ul> elements as necessary -->
+                                                        </div>
+                                                        <div class="built-on-wrapper" style="display: flex; align-items: center;">
+                                                            <img
+                                                                src="images/1-LogosForFavicons/zeroartlogo.png"
+                                                                loading="lazy"
+                                                                alt=""
+                                                                class="card-content_icon"
+                                                            >
+                                                            <a href="https://www.zeroartnft.com" class="card-content_heading">ZEROARTNFT.COM.</a>
+                                                        </div>
+                                                    </div>
+                                                    <a
+                                                        href="https://www.youtube.com/playlist?list=PLpjTM82q4Gu5wnVDzN6jAGxxYVY7JfMCL"
+                                                        target="_blank"
+                                                        class="otherwork_card-content is-red w-inline-block grow-effect"
+                                                        style="flex-grow: 1;"
+                                                    >
+                                                        <div id="matty-id-node-_77398629-d8b9-2282-7637-6b6df9e88f85-c34ab57e" class="card-content_all-caps-text">USE MJ IN YOUR TECHNOLOGICAL ENDEAVOURS ↗</div>
+                                                        <div class="card-content_overlay is-blue"></div>
+                                                        <div id="matty-id-node-d9c742b9-97d5-5453-50eb-bc69973f6797-c34ab57e" class="built-on-wrapper">
+                                                            <div class="div-block-8">
+                                                                <div class="card-content_icon w-embed">
+                                                                    <!-- SVG or Icon content --></div>
+                                                                <div class="card-content_heading">CHANNELS.</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                                <div class="otherwork_grid">
+                                                    <a href="https://www.machudesign.com" target="_blank" class="otherwork_card-content is-green w-inline-block">
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3c3-c34ab57e" class="card-content_all-caps-text">MACHUDESIGN.COM↗</div>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">#2D&3D DRAWINGS</li>
+                                                                <li class="project-tag">#LINKED IN</li>
+                                                                <li class="project-tag">#LINKED IN</li>
+                                                                <li class="project-tag">#LINKED IN</li>
+                                                                <li class="project-tag">#LINKED IN</li>
+                                                            </ul>
+                                                        </div>
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3cd-c34ab57e" class="built-on-wrapper">
+                                                            <div class="card-content_heading">Article.</div>
+                                                        </div>
+                                                        <div class="card-content_overlay is-green"></div>
+                                                    </a>
+                                                    <a href="https://www.machudesign.com" class="otherwork_card-content is-pink w-inline-block">
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">SaaS DevOps Software-Engineering WebDev LINE 3325 ↗</div>
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
+                                                        <ul role="list" class="card-content_list w-list-unstyled">
+                                                            <li class="project-tag">#Senior-Software-Developer</li>
+                                                            <li class="project-tag">#DIGITAL-MASTER</li>
+                                                        </ul>
+                                                        <div class="card-content_overlay is-pink"></div>
+                                                        <div class="built-on-wrapper">
+                                                            <div class="div-block-8">
+                                                                <img
+                                                                    src="images/Carolina Interlock 7789 - 500 - Block-Integration Collection.gif"
+                                                                    loading="lazy"
+                                                                    alt=""
+                                                                    class="card-content_icon"
+                                                                >
+                                                                <div class="card-content_heading">Software-Injection.</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="https://www.moo-lah.io" target="_blank" class="otherwork_card-content is-blue w-inline-block">
+                                                        <div id="matty-id-node-bae7e66b-d131-cb21-897e-69cb48696041-c34ab57e" class="card-content_all-caps-text">MOO-LAH.IO↗</div>
                                                         <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
                                                                 <li class="project-tag">#TECH POSTS</li>
@@ -3347,7 +3154,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                                 >
                                                                     <div class="jungle-pill-button_text">Send a message →</div>
                                                                 </a>
-                                                                <div class="jungle-pill_instructions text-style-allcaps">GRIP ME</div>
+                                                                <div class="jungle-pill_instructions text-style-allcaps">PING ME</div>
                                                             </div>
                                                         </div>
                                                     </div>
@@ -3361,7 +3168,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                         <div class="padding-global">
                                             <div class="padding-vertical padding-xxhuge">
                                                 <div class="testimonials_wrapper">
-                                                    <div id="w-node-_7a47e5c1-350a-804a-4d29-36cf273e5631-c34ab57e" class="testimonials_col _1">
+                                                    <div id="matty-id-node-_7a47e5c1-350a-804a-4d29-36cf273e5631-c34ab57e" class="testimonials_col _1">
                                                         <div class="testimonials_main-quote-container">
                                                             <h1 class="heading-style-h2">
                                                                 "Building the future with my companies means embracing innovation, sustainability, and seamless integration. Our commitment to expertise and effective project management sets us apart in the world of professional consultancy. In the realm of design technology, we believe actions speak louder than references. We're not just here to meet standards; we're here to redefine them, putting technology at the forefront of every project. At machudesign.com, modish0161.com, moo-lah.io , we don't just seek testimonials; we create legacies."
@@ -3401,7 +3208,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </div>
                                                         <div class="testimonials_col-black-overlay"></div>
                                                     </div>
-                                                    <div id="w-node-_7db7e8f5-51e3-c2d5-5253-dd7207c43048-c34ab57e" class="testimonials_col _2">
+                                                    <div id="matty-id-node-_7db7e8f5-51e3-c2d5-5253-dd7207c43048-c34ab57e" class="testimonials_col _2">
                                                         <div class="testimonials_items-container">
                                                             <div class="testimonials_item-wrapper">
                                                                 <div class="text-size-small">machudesign.com  has a creative outlook in design. We can always count on them to deliver unique, interesting, and surprising designs for our projects.</div>
