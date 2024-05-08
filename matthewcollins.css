@@ -4759,12 +4759,12 @@ html {
     margin-top: 6rem;
     padding-top: 1.5rem;
   }
-  /*moo-lahCard*/
+  /*zero-bank.io card*/
   .otherwork_card-content {
     height: 27.5rem;
     grid-column-gap: 16px;
     grid-row-gap: 16px;
-    background-color: #5e17eb;
+    background-color: #55A9A8;
     border-radius: .5rem;
     flex-direction: column;
     grid-template-rows: auto auto;
@@ -4778,7 +4778,7 @@ html {
   }
   
   .otherwork_card-content.is-blue {
-    color: #fff;
+    color: #ffffff;
     flex-direction: column;
     grid-template-rows: auto auto auto;
     justify-content: space-between;
@@ -4797,18 +4797,19 @@ html {
     display: flex;
   }
   /*machudesignCard*/
-  .otherwork_card-content.is-green {
+  .otherwork_card-content.is-green-turq
+ {
     width: auto;
     height: auto;
     min-height: 27.5rem;
     color: #fff;
-    background-color: #2edaff;
+    background-color: #3CA5BF;
     flex-direction: column;
     justify-content: space-between;
     display: flex;
   }
   /*modish0161Card*/
-  .otherwork_card-content.is-pink {
+  .otherwork_card-content.is-modish0161 {
     height: auto;
     min-height: 27.5rem;
     background-color: #ffde59;
@@ -4819,6 +4820,13 @@ html {
   }
   
   .otherwork_card-content.is-red {
+    height: auto;
+    min-height: 27.5rem;
+    color: #fff;
+    background-color: #3eafff;
+  }
+
+  .otherwork_card-content.is-zero-gold {
     height: auto;
     min-height: 27.5rem;
     color: #fff;
@@ -4979,7 +4987,8 @@ html {
     display: none;
   }
   
-  .card-content_overlay.is-green {
+  .card-content_overlay.is-green-turq
+ {
     background-color: #2edaff;
     display: none;
   }
@@ -5516,7 +5525,8 @@ html {
     right: -20px;
   }
   
-  .profile-wrapper.is-green {
+  .profile-wrapper.is-green-turq
+ {
     z-index: 1;
     background-color: #37b65b;
     position: relative;
@@ -7764,7 +7774,8 @@ html {
       height: auto;
     }
   
-    .otherwork_card-content.is-green, .otherwork_card-content.is-pink, .otherwork_card-content.is-red {
+    .otherwork_card-content.is-green-turq
+, .otherwork_card-content.is-pink, .otherwork_card-content.is-green-turq {
       min-height: auto;
     }
   

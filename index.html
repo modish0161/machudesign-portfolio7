@@ -192,6 +192,8 @@ a,
   display: none !important;
 }
 
+
+
 @media screen and (max-width: 991px) {
     .hide, .hide-tablet {
         display: none !important;
@@ -357,6 +359,26 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
     user-select: none;
 }
 
+.card-content_tag-wrapper .card-content_list .project-tag {
+    font-size: 12px; /* Reduce font size */
+    padding: 5px 10px; /* Adjust padding to make the boxes smaller */
+    margin: 2px; /* Reduce margin to bring tags closer together */
+}
+
+.card-content_tag-wrapper .card-content_list .project-tag a {
+    display: block; /* Makes the entire area clickable */
+    text-decoration: none; /* Optional: removes underline from links */
+    color: inherit; /* Keeps the text color consistent with the parent element */
+}
+
+.card-content_tag-wrapper .card-content_list .project-tag a {
+    display: block; /* Ensures the link fills the entire list item */
+    width: 100%; /* Ensures the link stretches to the full width of its container */
+    text-align: center; /* Aligns the text to the left; adjust as needed */
+    padding: 8px; /* Adjusts padding for better visual spacing; modify as per your design */
+    box-sizing: border-box; /* Ensures padding doesn't affect the overall width */
+}
+
 /* Central hover effect styling for link buttons */
 .card-content_list .project-tag a:hover {
     color: black; /* Text color on hover */
@@ -409,6 +431,30 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
 
 .card-content_list .project-tag {
     margin: 5px; /* Space around tags */
+}
+
+.project-tag.is-small-0 {
+    width: 22%;
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+    height: 45px;
+    transform: translateY(5px); /* Moves the element up by 10 pixels */
+}
+
+.project-tag.is-small-1 {
+    width: 23.66%;
+    display: inline-block;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+
+
+@media (max-width: 768px) {
+    .project-tag.is-small {
+        width: 25%;
+    }
 }
                 </style>
             </div>
@@ -962,20 +1008,18 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         </svg>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="work-header_general-information-wrapper hide-tablet"></div>
+                                            </div> 
                                             <div class="work-header_general-information-wrapper hide-tablet">
-                                                <div id="matty-id-node-c65e6174-66e4-203c-4ff6-fec540444dbe-c34ab57e" class="general-information_column">
+                                                <div class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">TIMEFRAME</div>
                                                     <ul role="list" class="w-list-unstyled">
-                                                        <li class="text-size-small text-weight-medium">YEAR 2000-24</li>
+                                                        <li class="text-size-small text-weight-medium">YEAR 2000-24</li>
                                                     </ul>
                                                 </div>
-                                                <div id="matty-id-node-_263ea09c-94bf-9f9a-5fbd-ccb6517dfb66-c34ab57e" class="general-information_column">
+                                                <div class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">DISCIPLINES</div>
                                                     <ul role="list" class="w-list-unstyled">
-                                                        <!--Frontend Technologies-->
-                                                        <li class="text-size-small text-weight-medium">Frontend Technologies -</li>
+                                                        <li class="text-size-small text-weight-medium">Frontend Technologies</li>
                                                         <br>
                                                         <br>
                                                         <br>
@@ -986,10 +1030,9 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         <br>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Blockchain & Web3 Devs-->
-                                                        <li class="text-size-small text-weight-medium">Blockchain & Web3 Devs -</li>
+                                                        <br> 
+                                                    </li>                                                                                                            
+                                                        <li class="text-size-small text-weight-medium">Blockchain & Web3 Devs</li>
                                                         <br>
                                                         <br>
                                                         <br>
@@ -1001,28 +1044,27 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         <br>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Smart-Contracts-->
                                                         <br>
-                                                        <li class="text-size-small text-weight-medium">Smart Contracts -</li>
+                                                        <br> 
+                                                    </li>
+                                                        <li class="text-size-small text-weight-medium">Smart Contracts</li>
                                                         <br>
                                                         <br>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Blockchain & Web3 Devs-->
-                                                        <li class="text-size-small text-weight-medium">Blockchain Networks -</li>
                                                         <br>
+                                                    </li>
+                                                        <li class="text-size-small text-weight-medium">Blockchain Networks</li>
                                                         <br>
                                                         <br>
+                                                        <br>                                                        
+                                                    </li>
+                                                    <br>
+                                                    <br>
+                                                    <br>                                                    
+                                                        <li class="text-size-small text-weight-medium">Web Dev Tools & Libs</li>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Web Dev Tools & Libs-->
-                                                        <li class="text-size-small text-weight-medium">Web Dev Tools & Libs -</li>
                                                         <br>
                                                         <br>
                                                         <br>
@@ -1031,336 +1073,442 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                         <br>
                                                         <br>
                                                         <br>
+                                                        <br>                                                        
+                                                    </li>
+                                                        <li class="text-size-small text-weight-medium">Wallet Technologies</li>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Wallet Technologies-->
-                                                        <li class="text-size-small text-weight-medium">Wallet Technologies -</li>
                                                         <br>
+                                                        <br>                                                                                                                                                                                                                                                                                     
+                                                    </li>                                                    
+                                                    <br>
+                                                    <br>                                                    
+                                                        <li class="text-size-small text-weight-medium">Trad. Web Dev</li>
                                                         <br>
                                                         <br>
                                                         <br>
+                                                                                                                                                                       
+                                                    </li>
+                                                        <li class="text-size-small text-weight-medium">Backend Technologies</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Traditional Web Development-->
-                                                        <li class="text-size-small text-weight-medium">Trad. Web Dev -</li>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Backend Technologies-->
-                                                        <li class="text-size-small text-weight-medium">Backend Technologies -</li>
                                                         <br>
                                                         <br>
+                                                        <br>                                                                                                                 
+                                                    </li>
+                                                    <br>
+                                                    <br>
+                                                        <li class="text-size-small text-weight-medium">Cloud Platforms</li>
                                                         <br>
                                                         <br>
+                                                        <br>                                                                                                                                                                                                                             
+                                                    </li>                                                    
+                                                    <br>                                                    
+                                                        <li class="text-size-small text-weight-medium">Gen Prog. Languages</li>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Cloud Platforms-->
-                                                        <li class="text-size-small text-weight-medium">Cloud Platforms -</li>
                                                         <br>
+                                                        <br>                                                                                                                                                                        
+                                                    </li>
+                                                    <br> 
+                                                        <li class="text-size-small text-weight-medium">Dev & API Tools</li>
                                                         <br>
+                                                        <br>                                                                                                                                                                        
+                                                    </li>
+                                                    <br>
+                                                        <li class="text-size-small text-weight-medium">Design & Multimedia Tools</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--General Programming Languages-->
-                                                        <li class="text-size-small text-weight-medium">Gen Prog. Languages -</li>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Dev & API Tools-->
-                                                        <li class="text-size-small text-weight-medium">Dev & API Tools -</li>
                                                         <br>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Design & Multimedia Tools-->
-                                                        <li class="text-size-small text-weight-medium">Design & Multimedia Tools -</li>
+                                                        <br>                                                                                                                
+                                                    </li>
+                                                    <br>
+                                                    <br>
+                                                        <li class="text-size-small text-weight-medium">Other Tools</li>
                                                         <br>
                                                         <br>
                                                         <br>
                                                         <br>
+                                                        <br>                                                                                                                                                                      
+                                                    </li>
+                                                        <li class="text-size-small text-weight-medium">Notetaking & Organisation</li>
                                                         <br>
+                                                        <br>                                                                                                                                                                        
+                                                    </li>
+                                                        <li class="text-size-small text-weight-medium">File Host & Collab</li>
                                                         <br>
+                                                        <br>                                                                                                                                                                       
+                                                    </li>
+                                                    <br>
+                                                        <li class="text-size-small text-weight-medium">Music Software</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Other Tools-->
-                                                        <li class="text-size-small text-weight-medium">Other Tools -</li>
                                                         <br>
                                                         <br>
                                                         <br>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Notetaking & Organization-->
-                                                        <li class="text-size-small text-weight-medium">Notetaking & Organization -</li>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--File Host & Collab-->
-                                                        <li class="text-size-small text-weight-medium">File Host & Collab -</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Music Software-->
-                                                        <li class="text-size-small text-weight-medium">Music Software -</li>
                                                         <br>
                                                         <br>
                                                         <br>
                                                         <br>
                                                         <br>
                                                         <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
+                                                        <br> 
+                                                    </li>
                                                         <br>
                                                     </ul>
                                                 </div>
-                                                <div id="matty-id-node-_77ca2349-47dd-2e0f-4330-3b2f51981932-c34ab57e" class="general-information_column">
+                                                <div class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">TOOLS</div>
                                                     <ul role="list" class="w-list-unstyled">
-                                                        <!--Frontend Technologies-->
-                                                        <li class="text-size-small text-weight-medium">HTML</li>
-                                                        <li class="text-size-small text-weight-medium">CSS3</li>
-                                                        <li class="text-size-small text-weight-medium">Tailwind.css</li>
-                                                        <li class="text-size-small text-weight-medium">JavaScript</li>
-                                                        <li class="text-size-small text-weight-medium">Node.js</li>
-                                                        <li class="text-size-small text-weight-medium">Redux</li>
-                                                        <li class="text-size-small text-weight-medium">React Query</li>
-                                                        <li class="text-size-small text-weight-medium">React Native</li>
-                                                        <li class="text-size-small text-weight-medium">React.js</li>
-                                                        <li class="text-size-small text-weight-medium">Framer Motion</li>
-                                                        <li class="text-size-small text-weight-medium">Shadcn UI</li>
-                                                        <li class="text-size-small text-weight-medium">Typescript</li>
+                                                        <li class="text-size-small text-weight-medium">HTML<br>CSS3<br>Tailwind.css<br>JavaScript<br>Node.js<br>Redux<br>React Query<br>React Native<br>React.js<br>Framer Motion<br>Shadcn UI<br>Typescript</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Blockchain & Web3 Devs-->
-                                                        <li class="text-size-small text-weight-medium">Ethers.js</li>
-                                                        <li class="text-size-small text-weight-medium">Solidity</li>
-                                                        <li class="text-size-small text-weight-medium">Web3.js</li>
-                                                        <li class="text-size-small text-weight-medium">Infura.io</li>
-                                                        <li class="text-size-small text-weight-medium">Pinata.io</li>
-                                                        <li class="text-size-small text-weight-medium">AlchemyWeb3</li>
-                                                        <li class="text-size-small text-weight-medium">Remix</li>
-                                                        <li class="text-size-small text-weight-medium">OpenZeppelin</li>
-                                                        <li class="text-size-small text-weight-medium">Hardhat</li>
-                                                        <li class="text-size-small text-weight-medium">Truffle</li>
-                                                        <li class="text-size-small text-weight-medium">Ganache</li>
-                                                        <li class="text-size-small text-weight-medium">Web3Modal (Deprecated)</li>
-                                                        <li class="text-size-small text-weight-medium">IPFS</li>
-                                                        <li class="text-size-small text-weight-medium">Etherscan.io</li>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Smart-Contracts-->
                                                         <br>
-                                                        <li class="text-size-small text-weight-medium">ERC-20</li>
-                                                        <li class="text-size-small text-weight-medium">ERC-720</li>
-                                                        <li class="text-size-small text-weight-medium">ERC-721</li>
-                                                        <li class="text-size-small text-weight-medium">ERC-1155</li>
+                                                        <li class="text-size-small text-weight-medium">Ethers.js<br>Solidity<br>Web3.js<br>Infura.io<br>Pinata.io<br>AlchemyWeb3<br>Remix<br>OpenZeppelin<br>Hardhat<br>Truffle<br>Ganache<br>Web3Modal(Deprecated)<br>IPFS<br>Etherscan.io</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Blockchain & Web3 Devs-->
-                                                        <li class="text-size-small text-weight-medium">Ethereum</li>
-                                                        <li class="text-size-small text-weight-medium">Polygon</li>
-                                                        <li class="text-size-small text-weight-medium">Goerli</li>
-                                                        <li class="text-size-small text-weight-medium">Rinkeby(Deprecated)</li>
-                                                        <li class="text-size-small text-weight-medium">Cronos POS Chain</li>
-                                                        <li class="text-size-small text-weight-medium">Avalanche</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Web Dev Tools & Libs-->
-                                                        <li class="text-size-small text-weight-medium">Vercel</li>
-                                                        <li class="text-size-small text-weight-medium">Replit.io</li>
-                                                        <li class="text-size-small text-weight-medium">Discord</li>
-                                                        <li class="text-size-small text-weight-medium">Axios</li>
-                                                        <li class="text-size-small text-weight-medium">Clerk-Auth</li>
-                                                        <li class="text-size-small text-weight-medium">React.js</li>
-                                                        <li class="text-size-small text-weight-medium">Next.js</li>
-                                                        <li class="text-size-small text-weight-medium">Node</li>
-                                                        <li class="text-size-small text-weight-medium">Prisma</li>
-                                                        <li class="text-size-small text-weight-medium">Mui</li>
-                                                        <li class="text-size-small text-weight-medium">RapidAPI</li>
-                                                        <li class="text-size-small text-weight-medium">Adobe Dreamweaver</li>
+                                                        <li class="text-size-small text-weight-medium">ERC-20<br>ERC-720<br>ERC-721<br>ERC-1155</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Wallet Technologies-->
-                                                        <li class="text-size-small text-weight-medium">Metamask</li>
-                                                        <li class="text-size-small text-weight-medium">Core</li>
-                                                        <li class="text-size-small text-weight-medium">walletConnect</li>
-                                                        <li class="text-size-small text-weight-medium">walletlink</li>
-                                                        <li class="text-size-small text-weight-medium">Formatic Wallet</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Traditional Web Development-->
-                                                        <li class="text-size-small text-weight-medium">Stripe/SDK/API</li>
-                                                        <li class="text-size-small text-weight-medium">Firebase</li>
+                                                        <li class="text-size-small text-weight-medium">Ethereum<br>Polygon<br>Goerli<br>Rinkeby(Deprecated)<br>Cronos POS Chain<br>Avalanche</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Backend Technologies-->
-                                                        <li class="text-size-small text-weight-medium">MySQL</li>
-                                                        <li class="text-size-small text-weight-medium">Django</li>
-                                                        <li class="text-size-small text-weight-medium">Flask</li>
-                                                        <li class="text-size-small text-weight-medium">Golang</li>
-                                                        <li class="text-size-small text-weight-medium">Drizzle ORM</li>
-                                                        <li class="text-size-small text-weight-medium">Pinecone DB</li>
-                                                        <li class="text-size-small text-weight-medium">MongoDB</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Cloud Platforms-->
-                                                        <li class="text-size-small text-weight-medium">Docker</li>
-                                                        <li class="text-size-small text-weight-medium">Microsoft Azure</li>
-                                                        <li class="text-size-small text-weight-medium">Amazon Web Services (AWS)</li>
-                                                        <li class="text-size-small text-weight-medium">Amazon S3 buckets</li>
+                                                        <li class="text-size-small text-weight-medium">Vercel<br>Replit.io<br>Discord<br>Axios<br>Clerk-Auth<br>React.js<br>Next.js<br>Node<br>Prisma<br>Mui<br>RapidAPI<br>Adobe Dreamweaver</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--General Programming Languages-->
-                                                        <li class="text-size-small text-weight-medium">Python</li>
-                                                        <li class="text-size-small text-weight-medium">Rust</li>
-                                                        <li class="text-size-small text-weight-medium">Processing 4.3 (MIT-Open-Source)</li>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Dev & API Tools-->
-                                                        <li class="text-size-small text-weight-medium">Postman</li>
-                                                        <li class="text-size-small text-weight-medium">VS Code</li>
-                                                        <li class="text-size-small text-weight-medium">GitHub</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Design & Multimedia Tools-->
-                                                        <li class="text-size-small text-weight-medium">Adobe Photoshop</li>
-                                                        <li class="text-size-small text-weight-medium">Adobe Illustrator</li>
-                                                        <li class="text-size-small text-weight-medium">Adobe InDesign</li>
-                                                        <li class="text-size-small text-weight-medium">Autodesk AutoCAD</li>
-                                                        <li class="text-size-small text-weight-medium">Autodesk - Discreet 3DS Max</li>
-                                                        <li class="text-size-small text-weight-medium">Autodesk 3D Viz</li>
-                                                        <li class="text-size-small text-weight-medium">Adobe After Effects</li>
-                                                        <li class="text-size-small text-weight-medium">Figma</li>
-                                                        <li class="text-size-small text-weight-medium">Cinema4d</li>
+                                                        <li class="text-size-small text-weight-medium">Metamask<br>Core<br>walletConnect<br>walletlink<br>Formatic Wallet</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Other Tools-->
-                                                        <li class="text-size-small text-weight-medium">Microsoft 365</li>
-                                                        <li class="text-size-small text-weight-medium">Mermaid.live</li>
-                                                        <li class="text-size-small text-weight-medium">Eraser.io</li>
-                                                        <li class="text-size-small text-weight-medium">Draw.io</li>
                                                         <br>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Notetaking & Organization-->
+                                                        <li class="text-size-small text-weight-medium">Stripe/SDK/API<br>Firebase</li>
+                                                        <br>
+                                                        <br>
+                                                        <li class="text-size-small text-weight-medium">KDB.AI<br>MySQL<br>Django<br>Flask<br>Golang<br>Drizzle ORM<br>Pinecone DB<br>MongoDB</li>
+                                                        <br>
+                                                        <br>                                                        
+                                                        <li class="text-size-small text-weight-medium">Docker<br>Microsoft Azure<br>Amazon Web Services (AWS)<br>Amazon S3 buckets</li>
+                                                        <br>
+                                                        <br>
+                                                        <li class="text-size-small text-weight-medium">KDB+/Q<br>Python<br>Rust<br>Processing 4.3 (MIT-Open-Source)</li>
+                                                        <br>
+                                                        <br>
+                                                        <li class="text-size-small text-weight-medium">Postman<br>VS Code<br>GitHub</li>
+                                                        <br>
+                                                        <br>
+                                                        <li class="text-size-small text-weight-medium">Adobe Photoshop<br>Adobe Illustrator<br>Adobe InDesign<br>Autodesk AutoCAD<br>Autodesk - Discreet 3DS Max<br>Autodesk 3D Viz<br>Adobe After Effects<br>Figma<br>Cinema4d</li>
+                                                        <br>
+                                                        <br>
+                                                        <li class="text-size-small text-weight-medium">Microsoft 365<br>Mermaid.live<br>Eraser.io<br>Draw.io</li>
+                                                        <br>
+                                                        <br>
                                                         <li class="text-size-small text-weight-medium">Evernote</li>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--File Host & Collab-->
-                                                        <li class="text-size-small text-weight-medium">Dropbox</li>
-                                                        <li class="text-size-small text-weight-medium">Google Docs</li>
-                                                    </ul>
-                                                    <ul role="list" class="w-list-unstyled">
-                                                        <!--Music Software-->
-                                                        <li class="text-size-small text-weight-medium">Cubase 12 + VST 2 & 3 Plugins</li>
-                                                        <li class="text-size-small text-weight-medium">Native Instruments</li>
-                                                        <li class="text-size-small text-weight-medium">Solid State Logic</li>
-                                                        <li class="text-size-small text-weight-medium">Waves Central</li>
-                                                        <li class="text-size-small text-weight-medium">Pro Tools</li>
-                                                        <li class="text-size-small text-weight-medium">Fab-Filter</li>
-                                                        <li class="text-size-small text-weight-medium">Reason 12</li>
-                                                        <li class="text-size-small text-weight-medium">Massive X</li>
-                                                        <li class="text-size-small text-weight-medium">Omnisphere 5.0</li>
-                                                        <li class="text-size-small text-weight-medium">Soundtoys</li>
-                                                        <li class="text-size-small text-weight-medium">Serum</li>
-                                                        <li class="text-size-small text-weight-medium">Ableton Live</li>
-                                                        <li class="text-size-small text-weight-medium">Falcon UXI</li>
+                                                        <br>
+                                                        <br>
+                                                        <li class="text-size-small text-weight-medium">Dropbox<br>Google Docs</li>
+                                                        <br>
+                                                        <br>
+                                                        <li class="text-size-small text-weight-medium">Cubase 12 + VST 2 & 3 Plugins<br>Native Instruments<br>Solid State Logic<br>Waves Central<br>Pro Tools<br>Fab-Filter<br>Reason 12<br>Massive X<br>Omnisphere 5.0<br>Soundtoys<br>Serum<br>Ableton Live<br>Falcon UXI</li>
+                                                        <br>
+                                                        <br>
                                                     </ul>
                                                 </div>
                                                 <div id="matty-id-node-_00c20448-77bc-7c55-453f-8bb33cd649de-c34ab57e" class="general-information_column">
                                                     <div class="text-size-small text-style-allcaps">Industry</div>
-                                                    <ul role="list" class="text-align-right max-width-small w-list-unstyled">
-                                                        <li class="project-tag is-small">#CRYPTO</li>
-                                                        <li class="project-tag is-small">#code</li>
-                                                        <li class="project-tag is-small">#Saas</li>
-                                                        <li class="project-tag is-small">#webapp</li>
-                                                        <li class="project-tag is-small">#tech</li>
-                                                        <li class="project-tag is-small">#CONSUMER</li>
-                                                        <li class="project-tag is-small">#FINTECH</li>
-                                                        <li class="project-tag is-small">#CRYPTO</li>
-                                                        <li class="project-tag is-small">#code</li>
-                                                        <li class="project-tag is-small">#Saas</li>
-                                                        <li class="project-tag is-small">#webapp</li>
-                                                        <li class="project-tag is-small">#tech</li>
-                                                        <li class="project-tag is-small">#CONSUMER</li>
-                                                        <li class="project-tag is-small">#FINTECH</li>
-                                                        <li class="project-tag is-small">#CRYPTO</li>
-                                                        <li class="project-tag is-small">#code</li>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Frontend Technologies -->
+                                                        <li class="project-tag is-small-0">#CRYPTO</li>
+                                                            <li class="project-tag is-small-0">#CODE</li>
+                                                            <li class="project-tag is-small-0">#SAAS</li>
+                                                            <li class="project-tag is-small-0">#WEB-APP</li>
+                                                            <li class="project-tag is-small-0">#TECH</li>
+                                                            <li class="project-tag is-small-0">#CONSUMER</li>
+                                                            <li class="project-tag is-small-0">#FIN-TECH</li>
+                                                            <li class="project-tag is-small-0">#DIGITAL-ART</li>
+                                                            <li class="project-tag is-small-0">#E-COMMERCE</li>
+                                                            <li class="project-tag is-small-0">#HEALTHTECH</li>
+                                                            <li class="project-tag is-small-0">#ED-TECH</li>
+                                                            <li class="project-tag is-small-0">#AI</li>
+                                                            <li class="project-tag is-small-0">#IOT</li>
+                                                            <li class="project-tag is-small-0">#BLOCKCHAIN</li>
+                                                            <li class="project-tag is-small-0">#UIUX</li>
+                                                            <li class="project-tag is-small-0">#SUSTAINABILITY</li>
+                                                            <li class="project-tag is-small-0">#STARTUP'S</li>
+                                                            <li class="project-tag is-small-0">#GREEN-TECH</li>
+                                                            <li class="project-tag is-small-0">#ARCH-TECH</li>
+                                                            <li class="project-tag is-small-0">#MOBILE-APPS</li>
+                                                            <li class="project-tag is-small-0">#CLOUD-SERVICES</li>
+                                                            <li class="project-tag is-small-0">#SECURITY</li>
+                                                            <li class="project-tag is-small-0">#DATA-SCIENCE</li>
+                                                            <li class="project-tag is-small-0">#MACHINE-LEARNING</li>                                                            
+                                                        <!-- Add additional tags as needed -->                                                        
                                                         <br>
                                                         <br>
-                                                        <br>
+                                                    </ul>                                                    
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Blockchain & Web3 Devs -->
+                                                        <li class="project-tag is-small-0">#CRYPTO</li>                                                        
+                                                        <li class="project-tag is-small-0">#SAAS</li>
+                                                        <li class="project-tag is-small-0">#WEB-APP</li>                                                        
+                                                        <li class="project-tag is-small-0">#CONSUMER</li>
+                                                        <li class="project-tag is-small-0">#FIN-TECH</li>
+                                                        <li class="project-tag is-small-0">#DIGITAL-ART</li>
+                                                        <li class="project-tag is-small-0">#E-COMMERCE</li>
+                                                        <li class="project-tag is-small-0">#HEALTHTECH</li>
+                                                        <li class="project-tag is-small-0">#ED-TECH</li>
+                                                        <li class="project-tag is-small-0">#AI</li>
+                                                        <li class="project-tag is-small-0">#IOT</li>
+                                                        <li class="project-tag is-small-0">#BLOCKCHAIN</li>
+                                                        <li class="project-tag is-small-0">#UIUX</li>
+                                                        <li class="project-tag is-small-0">#SUSTAINABILITY</li>
+                                                        <li class="project-tag is-small-0">#START-UP'S</li>
+                                                        <li class="project-tag is-small-0">#GREEN-TECH</li>
+                                                        <li class="project-tag is-small-0">#ARCH-TECH</li>
+                                                        <li class="project-tag is-small-0">#MOBILE-APPS</li>
+                                                        <li class="project-tag is-small-0">#CLOUD-SERVICES</li>
+                                                        <li class="project-tag is-small-0">#SECURITY</li>
+                                                        <li class="project-tag is-small-0">#DATA-SCIENCE</li>
+                                                        <li class="project-tag is-small-0">#MACHINE-LEARNING</li>
+                                                        <li class="project-tag is-small-0">#VIRTUAL-REALITY</li>
+                                                        <li class="project-tag is-small-0">#DEFI</li>
+                                                        <li class="project-tag is-small-0">#SMART-CONTRACT'S</li>
+                                                        <li class="project-tag is-small-0">#PUBLIC-LEDGER</li>                                                        
+                                                        <li class="project-tag is-small-0">#TOKENIZATION</li>                                                        
+                                                        <li class="project-tag is-small-0">#NFT'S</li>
+                                                        <li class="project-tag is-small-0">#DISTRIBUTED-LEDGER</li>
+                                                        <li class="project-tag is-small-0">#CHAINLINK</li>
+                                                        <li class="project-tag is-small-0">#SUPPLY-CHAIN</li>                                                        
+                                                        <li class="project-tag is-small-0">#ETH-2.0</li>
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Smart Contracts -->
+                                                        <li class="project-tag is-small-0">#ESCROW</li>
+                                                        <li class="project-tag is-small-0">#DEFI</li>
+                                                        <li class="project-tag is-small-0">#SUPPLY-CHAIN</li>
+                                                        <li class="project-tag is-small-0">#VOTING-SYSTEM'S</li>
+                                                        <li class="project-tag is-small-0">#CRYPTO</li>
+                                                        <li class="project-tag is-small-0">#I.D-VERIFICATION</li>
+                                                        <li class="project-tag is-small-0">#INSURANCE-CLAIM'S</li>
+                                                        <li class="project-tag is-small-0">#ROYALTY-DIST.</li>                                                        
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Blockchain Networks-->
+                                                        <li class="project-tag is-small-0">#PAY-PROCESSING</li>
+                                                        <li class="project-tag is-small-0">#DE-FI</li>
+                                                        <li class="project-tag is-small-0">#SMART-CONTRACT'S</li>
+                                                        <li class="project-tag is-small-0">#CHAIN-TRACKERS</li>
+                                                        <li class="project-tag is-small-0">#I.D-VERIFICATION</li>
+                                                        <li class="project-tag is-small-0">#TOKENIZATION</li>
+                                                        <li class="project-tag is-small-0">#CROSS-BORDER-PAY</li>
+                                                        <li class="project-tag is-small-0">#DATA-SHARE-HEALTH</li>
+                                                        <li class="project-tag is-small-0">#ED-CREDENTIALS</li>
+                                                        <li class="project-tag is-small-0">#TRADE</li>
+                                                        <li class="project-tag is-small-0">#VOTING-MECH'S</li>
+                                                        <li class="project-tag is-small-0">#PUBLIC-SECTOR</li>
+                                                        <li class="project-tag is-small-0">#LOYALTY-PROGRAM'S</li>
+                                                        <li class="project-tag is-small-0">#OWNERSHIP-LEDGERS</li>
+                                                        <li class="project-tag is-small-0">#COPYRIGHT</li>
+                                                        <li class="project-tag is-small-0">#ENVIRONMENTAL</li>                                                        
+                                                        <!-- Add additional tags as needed -->
                                                         <br>
                                                     </ul>
-                                                    <div id="matty-id-node-_00c20448-77bc-7c55-453f-8bb33cd649de-c34ab57e" class="general-information_column">
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <br>
-                                                        <ul role="list" class="text-align-right max-width-small w-list-unstyled">
-                                                            <li class="project-tag is-small">#CRYPTO</li>
-                                                            <li class="project-tag is-small">#nocode</li>
-                                                            <li class="project-tag is-small">#Saas</li>
-                                                            <li class="project-tag is-small">#webapp</li>
-                                                            <li class="project-tag is-small">#tech</li>
-                                                            <li class="project-tag is-small">#CONSUMER</li>
-                                                            <li class="project-tag is-small">#FINTECH</li>
-                                                        </ul>
-                                                    </div>
+                                                    
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled"> 
+                                                        <!-- Web Dev Tools & Libs -->                                                       
+                                                        <li class="project-tag is-small-0">#DYNAMIC-WEB-APP'S</li>
+                                                        <li class="project-tag is-small-0">#SINGLE-PAGE-APP'S</li>
+                                                        <li class="project-tag is-small-0">#STATIC-SITE-GEN</li>
+                                                        <li class="project-tag is-small-0">#SSR</li>
+                                                        <li class="project-tag is-small-0">#API-MANAGEMENT</li>
+                                                        <li class="project-tag is-small-0">#REAL-TIME-APP'S</li>
+                                                        <li class="project-tag is-small-0">#FS-JS-DEV'S</li>
+                                                        <li class="project-tag is-small-0">#CLOUD-HOSTING</li>
+                                                        <li class="project-tag is-small-0">#INTER-WEB-UI'S</li>
+                                                        <li class="project-tag is-small-0">#AUTH-SERVICES</li>
+                                                        <li class="project-tag is-small-0">#DATA-INTEGRATION</li>
+                                                        <li class="project-tag is-small-0">#CUSTOM-CMS</li>
+                                                        <li class="project-tag is-small-0">#DEVOPS-PIPES</li>
+                                                        <li class="project-tag is-small-0">#MOB-FIRST-DESIGNS</li>
+                                                        <li class="project-tag is-small-0">#E-COMMERCE</li>
+                                                        <li class="project-tag is-small-0">#CONTENT</li>
+                                                        <li class="project-tag is-small-0">#DATA-VISUALS</li>
+                                                        <li class="project-tag is-small-0">#API-INTEGRATIONS</li>
+                                                        <li class="project-tag is-small-0">#PERFORMANCE-OP'S</li>
+                                                        <li class="project-tag is-small-0">#WEB-STANDARDS</li>
+                                                        <li class="project-tag is-small-0">#INTER-NAT. OP'S</li>
+                                                        <li class="project-tag is-small-0">#CROSS-PLAT-COMPAT</li>
+                                                        <li class="project-tag is-small-0">#WEB-SECURITY</li>
+                                                        <li class="project-tag is-small-0">#PROG.-WEB-APP'S</li>                                                          
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Wallet Technologies -->
+                                                        <li class="project-tag is-small-0">#CRYPTO</li>
+                                                        <li class="project-tag is-small-0">#CODE</li>
+                                                        <li class="project-tag is-small-0">#SAAS</li>
+                                                        <li class="project-tag is-small-0">#WEB-APP'S</li>
+                                                        <li class="project-tag is-small-0">#TECH</li>
+                                                        <li class="project-tag is-small-0">#CONSUMER</li>
+                                                        <li class="project-tag is-small-0">#FIN-TECH</li>
+                                                        <li class="project-tag is-small-0">#DIGITAL-ART</li>
+                                                        <li class="project-tag is-small-0">#E-COMMERCE</li>
+                                                        <li class="project-tag is-small-0">#BANK-TECH</li>
+                                                        <li class="project-tag is-small-0">#ED-TECH</li>
+                                                        <li class="project-tag is-small-0">#AI</li>                                                        
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Trad. Web Dev -->
+                                                        <li class="project-tag is-small-0">#IAAS</li>
+                                                        <li class="project-tag is-small-0">#PAAS</li>
+                                                        <li class="project-tag is-small-0">#SAAS</li>
+                                                        <li class="project-tag is-small-0">#WEB-APP'S</li>                                                        
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Backend Technologies -->
+                                                        <li class="project-tag is-small-0">#FINANCE</li>                                                        
+                                                        <li class="project-tag is-small-0">#E-COMMERCE</li>
+                                                        <li class="project-tag is-small-0">#CMS</li>
+                                                        <li class="project-tag is-small-0">#ANALYTICS</li>
+                                                        <li class="project-tag is-small-0">#IOT</li>
+                                                        <li class="project-tag is-small-0">#REAL-TIME</li>
+                                                        <li class="project-tag is-small-0">#CLOUD</li>
+                                                        <li class="project-tag is-small-0">#AI</li>
+                                                        <li class="project-tag is-small-0">#ML-BACKENDS</li>
+                                                        <li class="project-tag is-small-0">#SUPPLY-CHAIN</li>
+                                                        <li class="project-tag is-small-0">#SMART-CITY</li>                                                        
+                                                        <li class="project-tag is-small-0">#BILLING</li>
+                                                        <li class="project-tag is-small-0">#CRM</li>
+                                                        <li class="project-tag is-small-0">#BLOCKCHAIN</li>
+                                                        <li class="project-tag is-small-0">#E-LEARNING</li>
+                                                        <li class="project-tag is-small-0">#MOBILE-BACKEND</li>
+                                                        <li class="project-tag is-small-0">#MARKETING</li>
+                                                        <li class="project-tag is-small-0">#STREAMING</li>
+                                                        <li class="project-tag is-small-0">#MONITORING</li>                                                        
+                                                        <li class="project-tag is-small-0">#DIGITAL-TWIN</li>                                                        
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Cloud Platforms -->
+                                                        <li class="project-tag is-small-0">#CONTAINERS</li>
+                                                        <li class="project-tag is-small-0">#VMs</li>
+                                                        <li class="project-tag is-small-0">#STORAGE</li>
+                                                        <li class="project-tag is-small-0">#DEPLOY</li>
+                                                        <li class="project-tag is-small-0">#SECURITY</li>
+                                                        <li class="project-tag is-small-0">#SERVERLESS</li>
+                                                        <li class="project-tag is-small-0">#DATABASES</li>
+                                                        <li class="project-tag is-small-0">#APIs</li>                                                       
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Gen Prog. Languages -->
+                                                        <li class="project-tag is-small-0">#FINANCE</li>
+                                                        <li class="project-tag is-small-0">#DATA-SCI</li>
+                                                        <li class="project-tag is-small-0">#WEB-DEV</li>
+                                                        <li class="project-tag is-small-0">#AI/ML</li>
+                                                        <li class="project-tag is-small-0">#IOT</li>
+                                                        <li class="project-tag is-small-0">#CLOUD</li>
+                                                        <li class="project-tag is-small-0">#BLOCKCHAIN</li>
+                                                        <li class="project-tag is-small-0">#GAMING</li>
+                                                        <li class="project-tag is-small-0">#ROBOTICS</li>
+                                                        <li class="project-tag is-small-0">#BIOTECH</li>
+                                                        <li class="project-tag is-small-0">#CYBERSEC</li>
+                                                        <li class="project-tag is-small-0">#ARTS</li>                                                        
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Dev & API Tools -->
+                                                        <li class="project-tag is-small-0">#API-TEST</li>
+                                                        <li class="project-tag is-small-0">#CODE-EDIT</li>
+                                                        <li class="project-tag is-small-0">#VERSION-CTRL</li>
+                                                        <li class="project-tag is-small-0">#WEB-DEV</li>
+                                                        <li class="project-tag is-small-0">#COLLAB</li>
+                                                        <li class="project-tag is-small-0">#DEVOPS</li>
+                                                        <li class="project-tag is-small-0">#CLOUD-DEV</li>
+                                                        <li class="project-tag is-small-0">#INTEGRATION</li>                                                                                                                
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Design & Multimedia Tools -->
+                                                        <li class="project-tag is-small-0">#GRAPHICS</li>
+                                                        <li class="project-tag is-small-0">#ILLUSTRATION</li>
+                                                        <li class="project-tag is-small-0">#LAYOUT</li>
+                                                        <li class="project-tag is-small-0">#3D-MODELING</li>
+                                                        <li class="project-tag is-small-0">#ANIMATION</li>
+                                                        <li class="project-tag is-small-0">#VIDEO-EDITING</li>
+                                                        <li class="project-tag is-small-0">#UX-DESIGN</li>
+                                                        <li class="project-tag is-small-0">#UI-DESIGN</li>
+                                                        <li class="project-tag is-small-0">#PRINT-DESIGN</li>
+                                                        <li class="project-tag is-small-0">#WEB-GRAPHICS</li>
+                                                        <li class="project-tag is-small-0">#BRANDING</li>
+                                                        <li class="project-tag is-small-0">#ADVERTISING</li>
+                                                        <li class="project-tag is-small-0">#PHOTO-EDITING</li>
+                                                        <li class="project-tag is-small-0">#VIRTUAL-REALITY</li>
+                                                        <li class="project-tag is-small-0">#AUGMENTED-REALITY</li>
+                                                        <li class="project-tag is-small-0">#PRODUCT-DESIGN</li>
+                                                        <li class="project-tag is-small-0">#ARCH-VIZ</li>
+                                                        <li class="project-tag is-small-0">#FILMMAKING</li>
+                                                        <li class="project-tag is-small-0">#MOTION-GRAPHICS</li>
+                                                        <li class="project-tag is-small-0">#INFOGRAPHICS</li>                                                                                                                 
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>                                                    
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Other Tools -->
+                                                        <li class="project-tag is-small-0">#OFFICE-TOOLS</li>
+                                                        <li class="project-tag is-small-0">#DIAGRAMMING</li>
+                                                        <li class="project-tag is-small-0">#COLLABORATION</li>
+                                                        <li class="project-tag is-small-0">#PRODUCTIVITY</li>
+                                                        <li class="project-tag is-small-0">#VISUALIZATIONS</li>
+                                                        <li class="project-tag is-small-0">#FLOWCHARTS</li>
+                                                        <li class="project-tag is-small-0">#MIND-MAPPING</li>
+                                                        <li class="project-tag is-small-0">#PROJECT-MGMT</li>                                                                                                                
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Notetaking & Organisation -->
+                                                        <li class="project-tag is-small-0">#PLANNING</li>
+                                                        <li class="project-tag is-small-0">#COLLABORATION</li>
+                                                        <li class="project-tag is-small-0">#ARCHIVING</li>
+                                                        <li class="project-tag is-small-0">#PRODUCTIVITY</li>                                                                                                                
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>                                                    
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- File Host & Collab -->
+                                                        <li class="project-tag is-small-0">#STORAGE</li>
+                                                        <li class="project-tag is-small-0">#SHARING</li>
+                                                        <li class="project-tag is-small-0">#COLLABORATION</li>
+                                                        <li class="project-tag is-small-0">#DOCUMENTS</li>                                                                                                               
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
+                                                    <br>
+                                                    <br>
+                                                    <ul role="list" class="text-align-right max-width-small-0 w-list-unstyled">
+                                                        <!-- Music Software -->
+                                                        <li class="project-tag is-small-0">#COMPOSITION</li>
+                                                        <li class="project-tag is-small-0">#MIXING</li>
+                                                        <li class="project-tag is-small-0">#MASTERING</li>
+                                                        <li class="project-tag is-small-0">#SOUND-DESIGN</li>
+                                                        <li class="project-tag is-small-0">#RECORDING</li>
+                                                        <li class="project-tag is-small-0">#EDITING</li>
+                                                        <li class="project-tag is-small-0">#SAMPLING</li>
+                                                        <li class="project-tag is-small-0">#EFFECTS</li>
+                                                        <li class="project-tag is-small-0">#LIVE-PERFORMANCE</li>
+                                                        <li class="project-tag is-small-0">#DJ-ING</li>
+                                                        <li class="project-tag is-small-0">#MUSIC-NOTATION</li>
+                                                        <li class="project-tag is-small-0">#LOOPING</li>
+                                                        <li class="project-tag is-small-0">#VIRTUAL-INST'S</li>
+                                                        <li class="project-tag is-small-0">#MIDI-CONTROL</li>
+                                                        <li class="project-tag is-small-0">#AUDIO-RESTORATION</li>
+                                                        <li class="project-tag is-small-0">#PODCASTING</li>                                                                                                                   
+                                                        <!-- Add additional tags as needed -->
+                                                    </ul>
                                                 </div>
-                                            </div>
-                                            <div class="main-work_modal _1">
-                                                <div class="padding-global">
-                                                    <div class="padding-vertical padding-xlarge">
-                                                        <div class="modal_content-wrapper">
-                                                            <div class="modal_content-wrapper_column-is-1">
-                                                                <div class="work-modal_general-information-wrapper text-color-white">
-                                                                    <div id="matty-id-node-_7eb94a15-db77-1974-d24a-4439ad8e63ab-c34ab57e" class="general-information_column">
-                                                                        <div class="text-size-small text-style-allcaps">TIMEFRAME</div>
-                                                                        <ul role="list" class="w-list-unstyled">
-                                                                            <li class="text-size-small text-weight-medium">2022</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                    <div id="matty-id-node-_7eb94a15-db77-1974-d24a-4439ad8e63b1-c34ab57e" class="general-information_column">
-                                                                        <div class="text-size-small text-style-allcaps">DISCIPLINE</div>
-                                                                        <ul role="list" class="w-list-unstyled">
-                                                                            <li class="text-size-small text-weight-medium">No code development</li>
-                                                                            <li class="text-size-small text-weight-medium">UI design</li>
-                                                                            <li class="text-size-small text-weight-medium">UX research</li>
-                                                                            <li class="text-size-small text-weight-medium">Art Direction</li>
-                                                                        </ul>
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                            <div class="modal_content-wrapper_column-is-2">
-                                                                <img src="https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/6386782940a89b4c76405d9b_chuttersnap-9G1kXjqOq4U-unsplash.jpg" loading="lazy" alt="">
-                                                                <img src="https://assets-global.website-files.com/637853f6f3d6aacb22fa97db/6386782940a89b4c76405d9b_chuttersnap-9G1kXjqOq4U-unsplash.jpg" loading="lazy" alt="">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                            </div>                                      
                                             <div style="opacity:0;-webkit-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 5%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="work_table-wrapper w-dyn-list">
                                                 <div role="list" class="collection-list w-dyn-items">
                                                     <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fb" role="listitem" class="collection-item w-dyn-item">
@@ -1722,7 +1870,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                                 >
                                                             </div>
                                                         </div>
-                                                        <a href="https://github.com/modish0161/ZeroLang-SmartContract-Test" class="project-tag is-small hide-mobile-portrait w-inline-block">
+                                                        <a href="https://github.com/modish0161/Smart-Contracts-Use-Cases---Zero-Blockchain-xyz---POW--POS" class="project-tag is-small hide-mobile-portrait w-inline-block">
                                                             <div class="icon-embed-xxsmall w-embed">
                                                                 <svg
                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -1759,7 +1907,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                             </div>
                                                             <div class="heading-style-h3">Portfolio - No. 7</div>
                                                             <div class="heading-style-h3 hide-tablet">—</div>
-                                                            <div class="heading-style-h3 hide-tablet">Different Portfolio Exploring Use Cases Within Web Development</div>
+                                                            <div class="heading-style-h3 hide-tablet">Different Portfolio Exploring Use Cases Within HTML/CSS - Web Development</div>
                                                         </div>
                                                         <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fc" class="image-wrapper">
                                                             <div class="image-sticky">
@@ -1810,7 +1958,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                             </div>
                                                             <div class="heading-style-h3">www.Zero-Art.com</div>
                                                             <div class="heading-style-h3 hide-tablet">—</div>
-                                                            <div class="heading-style-h3 hide-tablet">A Great Selection Of Art.</div>
+                                                            <div class="heading-style-h3 hide-tablet">A Great Selection Of Art Developed by MJ Collins Digitally.</div>
                                                         </div>
                                                         <div data-w-id="c77960fd-0137-ed1c-c7aa-8269432537fc" class="image-wrapper">
                                                             <div class="image-sticky">
@@ -2130,7 +2278,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                                 >
                                                             </div>
                                                         </div>
-                                                        <a href="https://www.phoenixs.co.uk" class="project-tag is-small hide-mobile-portrait w-inline-block">
+                                                        <a href="https://phoenix-software-application-deployment.vercel.app/" class="project-tag is-small hide-mobile-portrait w-inline-block">
                                                             <div class="icon-embed-xxsmall w-embed">
                                                                 <svg
                                                                     xmlns="http://www.w3.org/2000/svg"
@@ -2216,7 +2364,7 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                                     </div>
                                                                 </div>
                                                             </div>
-                                                            <div class="heading-style-h3">Modish0161 Space-Portfolio - Full Stack Development Experience.</div>
+                                                            <div class="heading-style-h3">Modish0161 Space-Portfolio.</div>
                                                             <div class="heading-style-h3 hide-tablet">—</div>
                                                             <div class="heading-style-h3 hide-tablet">Providing the best project experience and knowledge you can count on.</div>
                                                         </div>
@@ -2330,13 +2478,13 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                             <div class="otherwork_content-wrapper">
                                                 <div class="otherwork_grid _2" style="display: flex; align-items: center;">
                                                     <!-- Flex container -->
-                                                    <div class="otherwork_card-content is-yellow w-inline-block grow-effect">
+                                                    <div class="otherwork_card-content is-ZEROARTNFT w-inline-block grow-effect">
                                                         <a
                                                             href="https://oncyber.io/into-the-bit-collection"
                                                             target="_blank"
                                                             rel="noopener noreferrer"
                                                             class="card-content_all-caps-text"
-                                                        >CHECK THESE AND HAVE FUN ↗</a>
+                                                        >COLLECT THESE AND HAVE FUN ↗</a>
                                                         <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
                                                                 <li class="project-tag">
@@ -2381,16 +2529,16 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                                 </li>
                                                                 <li class="project-tag">
                                                                     <a href="https://crypto.com/nft/collection/7518f421f03a4577b0408a9149604f1c?tab=items" target="_blank" rel="noopener noreferrer">
-                                                                        # The
+                                                                        &nbsp;&nbsp;&nbsp;#&nbsp;The&nbsp;Nucleus&nbsp;Collection&nbsp;&nbsp;&nbsp;
                                                                         <br>
-                                                                        Nucleus Collection
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRYPTO.COM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                     </a>
                                                                 </li>
                                                                 <li class="project-tag">
                                                                     <a href="https://crypto.com/nft/collection/00e18797aad3a18faee67180be68a529?tab=items" target="_blank" rel="noopener noreferrer">
-                                                                        # The
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;The&nbsp;U8-17&nbsp;Collection&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                         <br>
-                                                                        U8-17 Collection
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CRYPTO.COM&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                                                     </a>
                                                                 </li>
                                                             </ul>
@@ -2408,192 +2556,477 @@ html { font-size: calc(0.625rem + 0.41666666666666663vw); }
                                                                 target="_blank"
                                                                 rel="noopener noreferrer"
                                                                 class="card-content_heading"
-                                                            >ZEROARTNFT.COM.</a>
+                                                            >ZEROARTNFT.COM</a>
                                                         </div>
                                                     </div>
-                                                    <a
-                                                        href="https://www.youtube.com/playlist?list=PLpjTM82q4Gu5wnVDzN6jAGxxYVY7JfMCL"
-                                                        target="_blank"
-                                                        class="otherwork_card-content is-red w-inline-block grow-effect"
-                                                        style="flex-grow: 1;"
-                                                    >
-                                                        <div id="matty-id-node-_77398629-d8b9-2282-7637-6b6df9e88f85-c34ab57e" class="card-content_all-caps-text">USE MJ IN YOUR TECHNOLOGICAL ENDEAVOURS OR EVEN PLAIN OL' YOUTUBE CHANNELS ↗</div>
-                                                        <div class="card-content_overlay is-blue"></div>
-                                                        <div id="matty-id-node-d9c742b9-97d5-5453-50eb-bc69973f6797-c34ab57e" class="built-on-wrapper">
-                                                            <div class="div-block-8">
-                                                                <div class="card-content_icon w-embed">
-                                                                    <!-- SVG or Icon content --></div>
-                                                                <div class="card-content_heading">CHANNELS.</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                                <div class="otherwork_grid">
-                                                    <a href="https://www.machudesign.com" target="_blank" class="otherwork_card-content is-green w-inline-block">
-                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3c3-c34ab57e" class="card-content_all-caps-text">MACHUDESIGN.COM↗</div>
+                                                    <div class="otherwork_card-content is-Zero-Blockchain-gold w-inline-block grow-effect">
+                                                        <a
+                                                            href="https://github.com/modish0161/Smart-Contracts-Use-Cases---Zero-Blockchain-xyz---POW--POS"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            class="card-content_all-caps-text"
+                                                        >DISCOVER ZERO BLOCKCHAIN.XYZ:SMART CONTRACTS ON GITHUB ↗</a>
                                                         <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
-                                                                <li class="project-tag">#2D&3D DRAWINGS</li>
-                                                                <li class="project-tag">#LINKED IN</li>
-                                                                <li class="project-tag">#LINKED IN</li>
-                                                                <li class="project-tag">#LINKED IN</li>
-                                                                <li class="project-tag">#LINKED IN</li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/About-Slides-Project7" target="_blank" rel="noopener noreferrer">
+                                                                        # Zero-Blockchain.xyz - ERCs - ON-CHAIN IND.
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage14" target="_blank" rel="noopener noreferrer"># Agriculture-Forestry-Fishing.sol</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage15" target="_blank" rel="noopener noreferrer"># Design & Construction.sol</a>
+                                                                </li>
                                                             </ul>
-                                                        </div>
-                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3cd-c34ab57e" class="built-on-wrapper">
-                                                            <div class="card-content_heading">Article.</div>
-                                                        </div>
-                                                        <div class="card-content_overlay is-green"></div>
-                                                    </a>
-                                                    <a href="https://www.machudesign.com" class="otherwork_card-content is-pink w-inline-block">
-                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">SaaS DevOps Software-Engineering WebDev LINE 3325 ↗</div>
-                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
-                                                        <ul role="list" class="card-content_list w-list-unstyled">
-                                                            <li class="project-tag">#Senior-Software-Developer</li>
-                                                            <li class="project-tag">#DIGITAL-MASTER</li>
-                                                        </ul>
-                                                        <div class="card-content_overlay is-pink"></div>
-                                                        <div class="built-on-wrapper">
-                                                            <div class="div-block-8">
-                                                                <img
-                                                                    src="images/Carolina Interlock 7789 - 500 - Block-Integration Collection.gif"
-                                                                    loading="lazy"
-                                                                    alt=""
-                                                                    class="card-content_icon"
-                                                                >
-                                                                <div class="card-content_heading">Software-Injection.</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                    <a href="https://www.moo-lah.io" target="_blank" class="otherwork_card-content is-blue w-inline-block">
-                                                        <div id="matty-id-node-bae7e66b-d131-cb21-897e-69cb48696041-c34ab57e" class="card-content_all-caps-text">MOO-LAH.IO↗</div>
-                                                        <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
-                                                                <li class="project-tag">#TECH POSTS</li>
-                                                                <li class="project-tag">#TECH POSTS</li>
-                                                                <li class="project-tag">#TECH POSTS</li>
-                                                                <li class="project-tag">#TECH POSTS</li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage16" target="_blank" rel="noopener noreferrer"># Education.sol - GRADES CONSENSUS</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage17" target="_blank" rel="noopener noreferrer"># Energy Supply.sol - CARBON CREDITS</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage18" target="_blank" rel="noopener noreferrer"># Environmental Conservation.sol</a>
+                                                                </li>
                                                             </ul>
-                                                        </div>
-                                                        <div class="card-content_overlay is-orange"></div>
-                                                        <div class="built-on-wrapper" style="display: flex; flex-direction: column;">
-                                                            <!-- Additional List to the Right -->
                                                             <ul role="list" class="card-content_list w-list-unstyled">
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage19" target="_blank" rel="noopener noreferrer"># Financial Services.sol - DEFI - FINTECH</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage20" target="_blank" rel="noopener noreferrer"># Healthcare.sol - PATIENT HEALTH RECORDS</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage21" target="_blank" rel="noopener noreferrer"># Manufacturing.sol - PRODUCT INFO</a>
+                                                                </li>
                                                             </ul>
-                                                            <div class="div-block-8">
-                                                                <div class="card-content_heading">Another Articles.</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
-                                                </div>
-                                            </div>
-                                            <br>
-                                            <div class="otherwork_content-wrapper">
-                                                <div class="otherwork_grid _2" style="display: flex; align-items: center;">
-                                                    <!-- Flex container -->
-                                                    <div class="otherwork_card-content is-yellow w-inline-block grow-effect">
-                                                        <a href="https://example.com/clone-fun" class="card-content_all-caps-text">CLONE THOSE AND HAVE FUN ↗</a>
-                                                        <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
-                                                                <!-- List items --></ul>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage22" target="_blank" rel="noopener noreferrer">
+                                                                        # Media and Entertainment.sol
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage23" target="_blank" rel="noopener noreferrer">
+                                                                        # Retail and E-commerce.sol
+                                                                        <br>                                                                        
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://modish-space-portfolio.vercel.app/SmartContractsUseCasePage24" target="_blank" rel="noopener noreferrer">
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Mining&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <br>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and&nbsp;Quarrying.sol&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
                                                             <!-- Repeat with other <ul> elements as necessary -->
                                                         </div>
                                                         <div class="built-on-wrapper" style="display: flex; align-items: center;">
                                                             <img
-                                                                src="images/1-LogosForFavicons/zeroartlogo.png"
+                                                                src="images/1-LOGOS_FOR_COMPANIES/Zero-Blockchain-Logo.png"
                                                                 loading="lazy"
                                                                 alt=""
                                                                 class="card-content_icon"
                                                             >
-                                                            <a href="https://www.zeroartnft.com" class="card-content_heading">ZEROARTNFT.COM.</a>
+                                                            <a
+                                                                href="https://www.zero-blockchain.xyz"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                class="card-content_heading"
+                                                            >ZERO-BLOCKCHAIN.XYZ</a>
                                                         </div>
-                                                    </div>
-                                                    <a
-                                                        href="https://www.youtube.com/playlist?list=PLpjTM82q4Gu5wnVDzN6jAGxxYVY7JfMCL"
-                                                        target="_blank"
-                                                        class="otherwork_card-content is-red w-inline-block grow-effect"
-                                                        style="flex-grow: 1;"
-                                                    >
-                                                        <div id="matty-id-node-_77398629-d8b9-2282-7637-6b6df9e88f85-c34ab57e" class="card-content_all-caps-text">USE MJ IN YOUR TECHNOLOGICAL ENDEAVOURS ↗</div>
-                                                        <div class="card-content_overlay is-blue"></div>
-                                                        <div id="matty-id-node-d9c742b9-97d5-5453-50eb-bc69973f6797-c34ab57e" class="built-on-wrapper">
-                                                            <div class="div-block-8">
-                                                                <div class="card-content_icon w-embed">
-                                                                    <!-- SVG or Icon content --></div>
-                                                                <div class="card-content_heading">CHANNELS.</div>
-                                                            </div>
-                                                        </div>
-                                                    </a>
+                                                    </div>                                                    
                                                 </div>
+
+                                                
                                                 <div class="otherwork_grid">
-                                                    <a href="https://www.machudesign.com" target="_blank" class="otherwork_card-content is-green w-inline-block">
-                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3c3-c34ab57e" class="card-content_all-caps-text">MACHUDESIGN.COM↗</div>
+                                                    <a href="https://www.machudesign.com" target="_blank" class="otherwork_card-content is-machudesign-blue
+ w-inline-block">
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3c3-c34ab57e" class="card-content_all-caps-text">MACHUDESIGN.COM ↗</div>
                                                         <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
-                                                                <li class="project-tag">#2D&3D DRAWINGS</li>
-                                                                <li class="project-tag">#LINKED IN</li>
-                                                                <li class="project-tag">#LINKED IN</li>
-                                                                <li class="project-tag">#LINKED IN</li>
-                                                                <li class="project-tag">#LINKED IN</li>
+                                                                <li class="project-tag"># A Website For AI Chat Experience</li>
+                                                                <li class="project-tag"># Explore<br />the Possibilities</li>
+                                                                <li class="project-tag"># Chat Smarter, Not Harder</li>                                                                
+                                                            </ul>                                                      
+                                                        
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Experience Intelligent Conversations</li>
+                                                                <li class="project-tag"># Discover Endless Solutions</li>
+                                                                <li class="project-tag"># Empower Your Chat Experience</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># AI-Powered Dialogue at Your Fingertips</li>
+                                                                <li class="project-tag"># Unleash Creativity Through Chat</li>
+                                                                <li class="project-tag"># Effortless Communication, Elevated Results</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Next-Level AI Chat Experiences</li>
+                                                                <li class="project-tag"># Innovative Solutions Await</li>
+                                                                <li class="project-tag"># implify Your Interactions - NO-BRAINER.io</li>                                                                
+                                                            </ul>
+                                                        </div>                                                        
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3cd-c34ab57e" class="built-on-wrapper">
+                                                            <img src="images/Carolina Interlock 7789 - 500 - Block-Integration Collection.gif" alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">
+                                                            <div class="card-content_heading">ARCH-TECH</div>
+                                                        </div>
+                                                        <div class="card-content_overlay is-green-turq
+"></div>
+                                                    </a>
+                                                    <a href="https://www.modish0161.com" target="_blank" class="otherwork_card-content is-modish0161 w-inline-block">
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">MODISH0161.COM ↗</div>
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># A Website For AI Chat Experience</li>
+                                                                <li class="project-tag"># Explore<br />the Possibilities</li>
+                                                                <li class="project-tag"># Chat Smarter, Not Harder</li>                                                                
+                                                            </ul>                                                      
+                                                        
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Experience Intelligent Conversations</li>
+                                                                <li class="project-tag"># Discover Endless Solutions</li>
+                                                                <li class="project-tag"># Empower Your Chat Experience</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># AI-Powered Dialogue at Your Fingertips</li>
+                                                                <li class="project-tag"># Unleash Creativity Through Chat</li>
+                                                                <li class="project-tag"># Effortless Communication, Elevated Results</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Next-Level AI Chat Experiences</li>
+                                                                <li class="project-tag"># Innovative Solutions Await</li>
+                                                                <li class="project-tag"># implify Your Interactions - NO-BRAINER.io</li>                                                                
                                                             </ul>
                                                         </div>
-                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3cd-c34ab57e" class="built-on-wrapper">
-                                                            <div class="card-content_heading">Article.</div>
-                                                        </div>
-                                                        <div class="card-content_overlay is-green"></div>
-                                                    </a>
-                                                    <a href="https://www.machudesign.com" class="otherwork_card-content is-pink w-inline-block">
-                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">SaaS DevOps Software-Engineering WebDev LINE 3325 ↗</div>
-                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
-                                                        <ul role="list" class="card-content_list w-list-unstyled">
-                                                            <li class="project-tag">#Senior-Software-Developer</li>
-                                                            <li class="project-tag">#DIGITAL-MASTER</li>
-                                                        </ul>
                                                         <div class="card-content_overlay is-pink"></div>
                                                         <div class="built-on-wrapper">
                                                             <div class="div-block-8">
                                                                 <img
                                                                     src="images/Carolina Interlock 7789 - 500 - Block-Integration Collection.gif"
-                                                                    loading="lazy"
-                                                                    alt=""
-                                                                    class="card-content_icon"
-                                                                >
-                                                                <div class="card-content_heading">Software-Injection.</div>
+                                                                    alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">
+                                                                <div class="card-content_heading">DEV-OPS</div>
                                                             </div>
                                                         </div>
                                                     </a>
-                                                    <a href="https://www.moo-lah.io" target="_blank" class="otherwork_card-content is-blue w-inline-block">
-                                                        <div id="matty-id-node-bae7e66b-d131-cb21-897e-69cb48696041-c34ab57e" class="card-content_all-caps-text">MOO-LAH.IO↗</div>
+                                                    <a href="https://zero-bank.vercel.app/" target="_blank" class="otherwork_card-content is-zero-bank-green w-inline-block">
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">ZERO-BANK.IO ↗</div>
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
                                                         <div class="card-content_tag-wrapper">
                                                             <ul role="list" class="card-content_list w-list-unstyled">
-                                                                <li class="project-tag">#TECH POSTS</li>
-                                                                <li class="project-tag">#TECH POSTS</li>
-                                                                <li class="project-tag">#TECH POSTS</li>
-                                                                <li class="project-tag">#TECH POSTS</li>
+                                                                <li class="project-tag"># A Website For AI Chat Experience</li>
+                                                                <li class="project-tag"># Explore<br />the Possibilities</li>
+                                                                <li class="project-tag"># Chat Smarter, Not Harder</li>                                                                
+                                                            </ul>                                                      
+                                                        
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Experience Intelligent Conversations</li>
+                                                                <li class="project-tag"># Discover Endless Solutions</li>
+                                                                <li class="project-tag"># Empower Your Chat Experience</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># AI-Powered Dialogue at Your Fingertips</li>
+                                                                <li class="project-tag"># Unleash Creativity Through Chat</li>
+                                                                <li class="project-tag"># Effortless Communication, Elevated Results</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Next-Level AI Chat Experiences</li>
+                                                                <li class="project-tag"># Innovative Solutions Await</li>
+                                                                <li class="project-tag"># implify Your Interactions - NO-BRAINER.io</li>                                                                
                                                             </ul>
                                                         </div>
-                                                        <div class="card-content_overlay is-orange"></div>
-                                                        <div class="built-on-wrapper" style="display: flex; flex-direction: column;">
-                                                            <!-- Additional List to the Right -->
-                                                            <ul role="list" class="card-content_list w-list-unstyled">
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
-                                                                <li class="project-tag">#TECH POST</li>
-                                                            </ul>
+                                                        <div class="card-content_overlay is-pink"></div>
+                                                        <div class="built-on-wrapper">
                                                             <div class="div-block-8">
-                                                                <div class="card-content_heading">Another Articles.</div>
+                                                                <img
+                                                                    src="images/Carolina Interlock 7789 - 500 - Block-Integration Collection.gif"
+                                                                    alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">                                                
+                                                                <div class="card-content_heading">FIN-TECH</div>
                                                             </div>
                                                         </div>
                                                     </a>
                                                 </div>
                                             </div>
+                                            <br> 
+                                            <div class="otherwork_content-wrapper">
+                                                <div class="otherwork_grid _2" style="display: flex; align-items: center;">
+                                                    <!-- Flex container -->
+                                                    <div class="otherwork_card-content is-moolah-purple w-inline-block grow-effect">
+                                                        <a
+                                                            href="https://www.moo-lah.io"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            class="card-content_all-caps-text"
+                                                        >GET REAL-TIME ARTICLES ON FINANCE, DATA & TOPICS BEYOND ↗</a>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/artificial-intel-machine-learning" target="_blank" rel="noopener noreferrer">
+                                                                        # Artificial Intelligence & Machine Learning
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/block-chain-cryptocurrency" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Block Chain 
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br>&&nbsp;Cryptocurrency</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/technology-gadgets" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Technology&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                                                        <br>& Gadgets</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/virtual-reality-augmented-reality" target="_blank" rel="noopener noreferrer"># Virtual Reality & Augmented Reality</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/e-commerce-drop-shipping" target="_blank" rel="noopener noreferrer"># E-Commerce & Dropshipping</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/entrepreneurship-small-business" target="_blank" rel="noopener noreferrer"># Entrepreneurship & Small Business</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/marketing-advertising" target="_blank" rel="noopener noreferrer"># Marketing & Advertising</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/personal-finance" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Personal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <br>&nbsp;&nbsp;Finance&nbsp;&nbsp;</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/sustainability-environmentalism" target="_blank" rel="noopener noreferrer"># Sustainability & Environmentalism</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/career-job-search" target="_blank" rel="noopener noreferrer">
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Career&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&&nbsp;Job&nbsp;Search&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/gaming-e-sports" target="_blank" rel="noopener noreferrer">
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Gaming&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;E-sports&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.moo-lah.io/categories/categories/stock-market-investing" target="_blank" rel="noopener noreferrer">
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# Stock Market&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+                                                                        <br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Investing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                </li>                                                                
+                                                            </ul>
+                                                            <!-- Repeat with other <ul> elements as necessary -->
+                                                        </div>
+                                                        <div class="built-on-wrapper" style="display: flex; align-items: center;">
+                                                            <img
+                                                                src="images/1-LOGOS_FOR_COMPANIES/moolah-icon.png" alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">
+                                                            <a
+                                                                href="https://www.mool-lah.io"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                class="card-content_heading"
+                                                            >MOO-LAH.IO</a>
+                                                        </div>
+                                                    </div>
+                                                    <div class="otherwork_card-content is-zeroart-niio-blue w-inline-block grow-effect">
+                                                        <a
+                                                            href="https://www.niio.com/home/portfolio/0/all"
+                                                            target="_blank"
+                                                            rel="noopener noreferrer"
+                                                            class="card-content_all-caps-text"
+                                                        >WHY NOT CHECK OUR ZERO-ART Niio GALLERY COLLECTION ↗</a>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.instagram.com/zeroartcuration" target="_blank" rel="noopener noreferrer">
+                                                                        # zeroartcuration - INSTAGRAM
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://twitter.com/zeroartcuration" target="_blank" rel="noopener noreferrer"># ZEROARTCURATION - TWITTER/X</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://oncyber.io/mechanisms642zeroart" target="_blank" rel="noopener noreferrer"># The MECHANISMS 642 Collection</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://oncyber.io/zeroart-cyborgcitybots" target="_blank" rel="noopener noreferrer"># The Cyborg City Bots Collection</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://opensea.io/collection/landscapesandshapes" target="_blank" rel="noopener noreferrer"># The Landscapes & Shapes Collection</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.saatchiart.com/art/Digital-Abstract-Symmetry/2163203/10185435/view" target="_blank" rel="noopener noreferrer"># Abstract Symmetry - SAATCHI ART</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.saatchiart.com/print/Digital-Ethereal-Wonderland/2163203/10152537/view" target="_blank" rel="noopener noreferrer">&nbsp;#&nbsp;Ethereal&nbsp;Wonderland&nbsp;
+                                                                        <br/>- SAATCHI ART</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.saatchiart.com/print/Digital-Abstract-Radiant-Bliss/2163203/10184989/view" target="_blank" rel="noopener noreferrer">&nbsp;#&nbsp;Abstract Radiant Bliss - SAATCHI ART</a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.saatchiart.com/print/Digital-All-It-Was/2163203/10152373/view" target="_blank" rel="noopener noreferrer">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# All It Was&nbsp;&nbsp; 
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;SAATCHI ART</a>
+                                                                </li>
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.saatchiart.com/print/Digital-1FC/2163203/10152417/view" target="_blank" rel="noopener noreferrer">
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;# 1FC&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </br>&nbsp;&nbsp;&nbsp;- SAATCHI ART&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.saatchiart.com/print/Digital-Abstract-Glowing/2163203/10166451/view" target="_blank" rel="noopener noreferrer">
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;#&nbsp;Abstract Glowing&nbsp;&nbsp;&nbsp;
+                                                                        <br>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- SAATCHI ART&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                </li>
+                                                                <li class="project-tag">
+                                                                    <a href="https://www.saatchiart.com/print/Digital-Abstract-Discovery/2163203/10152203/view" target="_blank" rel="noopener noreferrer">
+                                                                        &nbsp;#&nbsp;Abstract Discovery&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                        <br>
+                                                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;- SAATCHI ART&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                                                    </a>
+                                                                </li>
+                                                            </ul>
+                                                            <!-- Repeat with other <ul> elements as necessary -->
+                                                        </div>
+                                                        <div class="built-on-wrapper" style="display: flex; align-items: center;">
+                                                            <img
+                                                                src="images/1-LOGOS_FOR_COMPANIES/zeroartlogo.png" alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">
+                                                            <a
+                                                                href="https://zeroartcuration.wixsite.com/zero-art"
+                                                                target="_blank"
+                                                                rel="noopener noreferrer"
+                                                                class="card-content_heading"
+                                                            >ZERO-ART.COM</a>
+                                                        </div>
+                                                    </div>                                                    
+                                                </div>
+
+                                                
+                                                <div class="otherwork_grid">
+                                                    <a href="https://no-brainer-flax.vercel.app" target="_blank" class="otherwork_card-content is-no-brainer-magenta
+ w-inline-block">
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3c3-c34ab57e" class="card-content_all-caps-text">NO-BRAINER.IO ↗</div>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># A Website For AI Chat Experience</li>
+                                                                <li class="project-tag"># Explore<br />the Possibilities</li>
+                                                                <li class="project-tag"># Chat Smarter, Not Harder</li>                                                                
+                                                            </ul>                                                      
+                                                        
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Experience Intelligent Conversations</li>
+                                                                <li class="project-tag"># Discover Endless Solutions</li>
+                                                                <li class="project-tag"># Empower Your Chat Experience</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># AI-Powered Dialogue at Your Fingertips</li>
+                                                                <li class="project-tag"># Unleash Creativity Through Chat</li>
+                                                                <li class="project-tag"># Effortless Communication, Elevated Results</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Next-Level AI Chat Experiences</li>
+                                                                <li class="project-tag"># Innovative Solutions Await</li>
+                                                                <li class="project-tag"># implify Your Interactions - NO-BRAINER.io</li>                                                                
+                                                            </ul>
+                                                        </div>
+                                                                                                               
+                                                        <div id="matty-id-node-_438fa2cb-e5df-fdeb-1f49-10734851a3cd-c34ab57e" class="built-on-wrapper">
+                                                            <img
+                                                                    src="images/Carolina Interlock 7789 - 500 - Block-Integration Collection.gif"
+                                                                    alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">
+                                                            <div class="card-content_heading">AI-TECH</div>
+                                                        </div>
+                                                        <div class="card-content_overlay is-green-turq
+"></div>
+                                                    </a>
+                                                    <a href="https://cannabeedee.wixsite.com/mysite" target="_blank" class="otherwork_card-content is-canna-bee-dee-indigo w-inline-block">
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff55-c34ab57e" class="card-content_all-caps-text">CANNABEEDEE.COM ↗</div>
+                                                        <div class="card-content_tag-wrapper">
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Unlock The Potential of CBD</li>
+                                                                <li class="project-tag"># Explore Wellness With CBD</li>
+                                                                <li class="project-tag"># CBD For A HealthierLife</li>                                                                
+                                                            </ul>                                                      
+                                                        
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Join The CBD Conversation</li>
+                                                                <li class="project-tag"># Find Your CBD Match</li>
+                                                                <li class="project-tag"># Start Your Wellness Journey With CBD</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># CBD Power at Your Fingertips</li>
+                                                                <li class="project-tag"># Unleash Wellness Creativity</li>
+                                                                <li class="project-tag"># Shop CBD With Ease</li>                                                                
+                                                            </ul>
+                                                            <ul role="list" class="card-content_list w-list-unstyled">
+                                                                <li class="project-tag"># Experience Innovative CBD</li>
+                                                                <li class="project-tag"># Top Quality CBD Solutions</li>
+                                                                <li class="project-tag"># Effortless CBD Shopping</li>                                                                
+                                                            </ul>
+                                                        </div>
+                                                        <div id="matty-id-node-e98f3999-c016-7aa8-9deb-9d1264e4ff57-c34ab57e" class="built-on-wrapper"></div>
+                                                        
+                                                        <div class="card-content_overlay is-pink"></div>
+                                                        <div class="built-on-wrapper">
+                                                            <div class="div-block-8">
+                                                                <img
+                                                                    src="images/1-LOGOS_FOR_COMPANIES/CannaBeeDee.png" alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">
+                                                                <div class="card-content_heading">E-COMMERCE</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <a href="https://my-hdivsago5-matthew-collins-projects.vercel.app" target="_blank" class="otherwork_card-content is-phoenix-orange w-inline-block">
+                                                        <div id="matty-id-node-bae7e66b-d131-cb21-897e-69cb48696041-c34ab57e" class="card-content_all-caps-text">PHOENIX - MICROSOFT PARTNER ↗</div>
+                                                        
+                                                        <div class="card-content_overlay is-orange"></div>
+                                                        <div class="built-on-wrapper" style="display: flex; flex-direction: column;">
+                                                            
+                                                            <div class="card-content_tag-wrapper">
+                                                                <ul role="list" class="card-content_list w-list-unstyled">
+                                                                    <li class="project-tag">#A Website For AI Chat Experience</li>
+                                                                    <li class="project-tag">#Explore the Possibilities</li>
+                                                                    <li class="project-tag">#Chat Smarter, Not Harder with No-Brainer</li>                                                                
+                                                                </ul>                                                      
+                                                            
+                                                                <ul role="list" class="card-content_list w-list-unstyled">
+                                                                    <li class="project-tag">#Experience Intelligent Conversations</li>
+                                                                    <li class="project-tag">#Discover Endless Solutions</li>
+                                                                    <li class="project-tag">#Empower Your Chat Experience</li>                                                                
+                                                                </ul>
+                                                                <ul role="list" class="card-content_list w-list-unstyled">
+                                                                    <li class="project-tag">#AI-Powered Dialogue at Your Fingertips</li>
+                                                                    <li class="project-tag">#Unleash Creativity Through Chat</li>
+                                                                    <li class="project-tag">#Effortless Communication, Elevated Results</li>                                                                
+                                                                </ul>
+                                                                <ul role="list" class="card-content_list w-list-unstyled">
+                                                                    <li class="project-tag">#Next-Level AI Chat Experiences</li>
+                                                                    <li class="project-tag">#Innovative Solutions Await</li>
+                                                                    <li class="project-tag">#Simplify Your Interactions</li>                                                                
+                                                                </ul>
+                                                            </div>
+                                                            <div class="div-block-8">
+                                                                <img
+                                                                    src="images/1-LOGOS_FOR_COMPANIES/P-Logo.png" alt="Descriptive Alt Text" class="header-icon" width="100" height="auto">
+                                                                <div class="card-content_heading">MERN-STACK</div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                </div>
+                                            </div>                                                                                      
                                             <div data-w-id="a569327e-f3aa-aa53-e1da-e6e78b941962" class="webflow-users_component border-top">
                                                 <div class="margin-top margin-large">
                                                     <div style="opacity:0;-webkit-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(0, 10%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0)" class="work_title-wrapper">
